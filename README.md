@@ -17,3 +17,5 @@ This repository provide the enterprise architecture level sample projects. The g
    - Enterprise_MVC_Web_App core project.
    - Enterprise_MVC_Web_App infra project.
    - Enterprise_MVC_Web_App test project.
+ - Enterprise_Dot_Net_Core_WebApp
+   - Waitting
