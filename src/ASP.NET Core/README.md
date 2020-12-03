@@ -1,4 +1,4 @@
-# Enterprise_MVC_WebApp
+# Enterprise_Dot_Net_Core_WebApp
 ## Abstract
 It is based on the ASP.NET Core framework v2.8.
 ## Developed Environment
