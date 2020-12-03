@@ -7,4 +7,11 @@
 **Running environment**: Windows server/ IIS 10
 
 ## Reference artical link
-Building MVC pattern project by Visual Studio 2017 ( ASP.Net framework Part ) [Link](https://davidskyspace.com/?p=168)
+[Building MVC pattern project by Visual Studio 2017 ( ASP.Net framework Part )](https://davidskyspace.com/?p=168)
+
+## Project Explorer
+ - Enterprise_MVC_Web_App
+   - Enterprise_MVC_Web_App web project
+   - Enterprise_MVC_Web_App core porject
+   - Enterprise_MVC_Web_App infra project
+   - Enterprise_MVC_Web_App test project
