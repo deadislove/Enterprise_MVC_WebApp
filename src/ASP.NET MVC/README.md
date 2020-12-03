@@ -1,6 +1,6 @@
 # Enterprise_MVC_WebApp
 ## Abstract
-
+It is based on the ASP.NET framework v4.8.
 ## Developed Environment
 **Complier:** Visual Studio 2017\
 **OS:** Windows 10 version 18363\
