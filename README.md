@@ -10,6 +10,7 @@ This repository provide the enterprise architecture level sample projects. The g
 
 ## Reference artical link
 [Building MVC pattern project by Visual Studio 2017 ( ASP.Net framework Part )](https://davidskyspace.com/?p=168)
+[12/7/2020 Add project to GitHub platform.](#)
 
 ## Project Explorer
  - Enterprise_MVC_Web_App
@@ -18,4 +19,6 @@ This repository provide the enterprise architecture level sample projects. The g
    - Enterprise_MVC_Web_App infra project.
    - Enterprise_MVC_Web_App test project.
  - Enterprise_Dot_Net_Core_WebApp
-   - Waitting
+   - Enterprise_Dot_Net_Core_WebApp web project
+   - Enterprise_Dot_Net_Core_WebApp.Core core project
+   - Enterprise_Dot_Net_Core_WebApp.Infra infra project.
