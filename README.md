@@ -9,7 +9,7 @@ This repository provide the enterprise architecture level sample projects. The g
 **Running environment**: Windows server/ IIS 10
 
 ## Reference artical link
-[Building MVC pattern project by Visual Studio 2017 ( ASP.Net framework Part )](https://davidskyspace.com/?p=168)
+[Building MVC pattern project by Visual Studio 2017 ( ASP.Net framework Part )](https://davidskyspace.com/?p=168) \
 [Building MVC pattern project by Visual Studio 2017 ( ASP.Net Core Part )](#)
 
 ## Project Explorer
