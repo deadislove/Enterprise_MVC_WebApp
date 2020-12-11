@@ -9,15 +9,20 @@ This repository provide the enterprise architecture level sample projects. The g
 **Running environment**: Windows server/ IIS 10
 
 ## Reference artical link
+
+### ASP.NET MVC PART
 [Building MVC pattern project by Visual Studio 2017 ( ASP.Net framework Part )](https://davidskyspace.com/?p=168) \
-[Building MVC pattern project by Visual Studio 2017 ( ASP.Net Core Part )](#)
+### ASP.NET Core PART
+[Building MVC pattern project by Visual Studio 2017 ( ASP.Net Core Part )](#)\
 
 ## Project Explorer
+### ASP.NET MVC PART
  - Enterprise_MVC_Web_App
    - Enterprise_MVC_Web_App web project.
    - Enterprise_MVC_Web_App core project.
    - Enterprise_MVC_Web_App infra project.
    - Enterprise_MVC_Web_App test project.
+ ### ASP.NET Core PART
  - Enterprise_Dot_Net_Core_WebApp
    - Enterprise_Dot_Net_Core_WebApp web project
    - Enterprise_Dot_Net_Core_WebApp.Core core project
