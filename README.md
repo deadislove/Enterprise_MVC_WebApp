@@ -1,4 +1,10 @@
 # Enterprise MVC pattern
+> MVC pattern sample project. All of the guide articles will write on my blog. If you're interested in the MVC pattern, please, follow my WordPress blog. 
+Every week, I will post new articles about the ASP.NET MVC or ASP.NET Core.
+\
+\
+Blog link: [David Sky Space](https://davidskyspace.com/)
+
 ## Abstract
 This repository provide the enterprise architecture level sample projects. The guide article will be in my blog web site. You can follow the reference link.
 
