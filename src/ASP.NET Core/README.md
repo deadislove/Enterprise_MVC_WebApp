@@ -13,6 +13,7 @@ It is based on the ASP.NET Core framework v2.8.
 - Microsoft.EntityFrameworkCore.Relational
 - Microsoft.EntityFrameworkCore.Design
 - Microsoft.EntityFrameworkCore.Tools
+- Serilog.Extensions.Logging.File
 ## Reference link:
 [Building MVC pattern project by Visual Studio 2017 ( ASP.Net Core Part )](https://davidskyspace.com/building-mvc-pattern-project-by-visual-studio-2017-asp-net-core-part/)
 
