@@ -16,6 +16,7 @@ It is based on the ASP.NET Core framework v2.8.
 - Serilog.Extensions.Logging.File
 ## Reference link:
 [Building MVC pattern project by Visual Studio 2017 ( ASP.Net Core Part )](https://davidskyspace.com/building-mvc-pattern-project-by-visual-studio-2017-asp-net-core-part/)
+\
 [Aspect-oriented programming in .NET Core](https://davidskyspace.com/aspect-oriented-programming-in-net-core/)
 
 ## Release Notification
