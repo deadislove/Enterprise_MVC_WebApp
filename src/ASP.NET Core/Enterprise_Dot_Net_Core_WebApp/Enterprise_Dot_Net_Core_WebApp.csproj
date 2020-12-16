@@ -13,12 +13,18 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="2.0.0" />
   </ItemGroup>
 
 
   <ItemGroup>
     <ProjectReference Include="..\Enterprise_Dot_Net_Core_WebApp.Core\Enterprise_Dot_Net_Core_WebApp.Core.csproj" />
     <ProjectReference Include="..\Enterprise_Dot_Net_Core_WebApp.Infra\Enterprise_Dot_Net_Core_WebApp.Infra.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Logs\" />
   </ItemGroup>
 
 </Project>

@@ -13,6 +13,10 @@ using Microsoft.EntityFrameworkCore;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface;
 using Enterprise_Dot_Net_Core_WebApp.Core.Entities;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories;
+using Enterprise_Dot_Net_Core_WebApp.Logging.Interface;
+using Enterprise_Dot_Net_Core_WebApp.Logging.Repository;
+using System.IO;
+using Microsoft.Extensions.Logging;
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -39,12 +43,14 @@ namespace Enterprise_Dot_Net_Core_WebApp
                 option => option.UseSqlServer(Configuration.GetConnectionString("DB_EntityString")));
 
             services.AddScoped(typeof(IEnterprise_MVC_CoreRepository), typeof(Enterprise_MVC_Repository));
+            //AOP Scoped
+            services.AddScoped(typeof(ILogRepository), typeof(LogRepository));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -54,6 +60,10 @@ namespace Enterprise_Dot_Net_Core_WebApp
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            //Add log file path
+            var path = Directory.GetCurrentDirectory();
+            loggerFactory.AddFile($"{path}\\Logs\\Log.txt");
 
             app.UseStaticFiles();
             app.UseCookiePolicy();

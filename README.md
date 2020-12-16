@@ -22,6 +22,8 @@ This repository provide the enterprise architecture level sample projects. The g
 
 ### ASP.NET Core PART
 [Building MVC pattern project by Visual Studio 2017 ( ASP.Net Core Part )](https://davidskyspace.com/building-mvc-pattern-project-by-visual-studio-2017-asp-net-core-part/)
+\
+[Aspect-oriented programming in .NET Core](https://davidskyspace.com/aspect-oriented-programming-in-net-core/)
 
 
 ## Project Explorer
