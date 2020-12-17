@@ -15,7 +15,7 @@ It is based on the ASP.NET framework v4.8.
  - Unity.Mvc
 
 ## Reference link:
-[Building MVC pattern project by Visual Studio 2017 ( ASP.Net framework Part )](https://davidskyspace.com/?p=168)
+[Building MVC pattern project by Visual Studio 2017 ( ASP.Net framework Part )](https://davidskyspace.com/building-mvc-pattern-project-by-visual-studio-2017-asp-net-framework-part/)
 
 ## Release Notification
 - Add the project to the GitHub platform.
