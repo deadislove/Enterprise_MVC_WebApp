@@ -4,6 +4,11 @@ Every week, I will post new articles about the ASP.NET MVC or ASP.NET Core.
 \
 \
 Blog link: [David Sky Space](https://davidskyspace.com/)
+\
+\
+If you like my blog and Github, please donate to me and let me have the power to write the next article.
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F82YR41)
 
 ## Abstract
 This repository provide the enterprise architecture level sample projects. The guide article will be in my blog web site. You can follow the reference link.
