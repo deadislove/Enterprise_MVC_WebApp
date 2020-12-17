@@ -22,7 +22,7 @@ This repository provide the enterprise architecture level sample projects. The g
 ## Reference artical link
 
 ### ASP.NET MVC PART
-[Building MVC pattern project by Visual Studio 2017 ( ASP.Net framework Part )](https://davidskyspace.com/?p=168)
+[Building MVC pattern project by Visual Studio 2017 ( ASP.Net framework Part )](https://davidskyspace.com/building-mvc-pattern-project-by-visual-studio-2017-asp-net-framework-part/)
 
 
 ### ASP.NET Core PART
