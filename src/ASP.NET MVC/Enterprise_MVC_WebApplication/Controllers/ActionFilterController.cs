@@ -1,33 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using Enterprise_MVC_WebApplication.Core;
-using Enterprise_MVC_WebApplication.Core.Interface;
-using Enterprise_MVC_WebApplication.Infra;
+﻿using Enterprise_MVC_WebApplication.Core.Interface;
 using Enterprise_MVC_WebApplication.Logging;
+using System;
+using System.Net;
+using System.Web.Mvc;
 
 namespace Enterprise_MVC_WebApplication.Controllers
 {
     [Log]
-    public class Enterprise_MVC_WebAppController : Controller
+    public class ActionFilterController : Controller
     {
+
         IEnterprise_MVC_CoreRepository db;
 
-        public Enterprise_MVC_WebAppController(IEnterprise_MVC_CoreRepository db)
+        public ActionFilterController(IEnterprise_MVC_CoreRepository db)
         {
             this.db = db;
         }
 
-        // GET: Enterprise_MVC_WebApp
+        // GET: ActionFilter
         public ActionResult Index()
         {
             return View(db.GetData());
         }
 
-        // GET: Enterprise_MVC_WebAPp/Details/{id}
+        // GET: ActionFilter/Details/{id}
         public ActionResult Details(string id)
         {
             if (string.IsNullOrEmpty(id))
@@ -41,16 +37,16 @@ namespace Enterprise_MVC_WebApplication.Controllers
                 return View(o);
         }
 
-        // GET: Enterprise_MVC_WebApp/Create
+        // GET: ActionFilter/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Enterprise_MVC_WebApp/Create
+        // POST: ActionFilter/Create
         /* To protect from overposting attacks.
          */
-        [HttpPost,ValidateAntiForgeryToken]
+        [HttpPost, ValidateAntiForgeryToken]
         public ActionResult Create(Core.Enterprise_MVC_Core o)
         {
             if (ModelState.IsValid)
@@ -62,7 +58,7 @@ namespace Enterprise_MVC_WebApplication.Controllers
             return View(o);
         }
 
-        // GET: Enterprise_MVC_WebApp/Edit/{id}
+        // GET: ActionFilter/Edit/{id}
         public ActionResult Edit(string id)
         {
             if (string.IsNullOrEmpty(id))
@@ -74,7 +70,7 @@ namespace Enterprise_MVC_WebApplication.Controllers
                 return View(o);
         }
 
-        // POST: Enterprise_MVC_WebApp/Edit/{id}
+        // POST: ActionFilter/Edit/{id}
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult Edit(Core.Enterprise_MVC_Core o)
         {
@@ -86,7 +82,7 @@ namespace Enterprise_MVC_WebApplication.Controllers
             return View(o);
         }
 
-        // Get: Enterprise_MVC_WebApp/Delete/{id}
+        // Get: ActionFilter/Delete/{id}
         public ActionResult Delete(string id)
         {
             if (string.IsNullOrEmpty(id))
@@ -99,7 +95,7 @@ namespace Enterprise_MVC_WebApplication.Controllers
                 return View(o);
         }
 
-        // POST: Enterprise_MVC_WebApp/Delete/{id}
+        // POST: ActionFilter/Delete/{id}
         [HttpPost, ActionName("Delete"), ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
