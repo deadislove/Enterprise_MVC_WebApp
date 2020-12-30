@@ -17,7 +17,8 @@ This repository provide the enterprise architecture level sample projects. The g
 **Complier**: Visual Studio 2017\
 **OS**: Windows 10\
 **Framewrok**: .NET framework 4.8 & .Net Core 2.8 framework\
-**Running environment**: Windows server/ IIS 10
+**Running environment**: Windows server/ IIS 10\
+**Common Language Runtime(CLR)**: CLR 4.0
 
 ## Reference artical link
 
