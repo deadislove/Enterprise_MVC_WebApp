@@ -10,6 +10,7 @@ It is based on the ASP.NET framework v4.8.
 **OS:** Windows 10 version 18363\
 **Framewrok:** .NET framework 4.8 & .Net Core 2.8 framework\
 **Running environment:** Windows server 2019/ IIS 10\
+**Common Language Runtime(CLR)**: CLR 4.0
 
 **Third Party Tools:**
  - Unity.Mvc
