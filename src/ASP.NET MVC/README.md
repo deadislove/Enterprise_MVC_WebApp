@@ -14,6 +14,7 @@ It is based on the ASP.NET framework v4.8.
 
 **Third Party Tools:**
  - Unity.Mvc
+ - Newtonsoft.Json
 
 ## Reference link:
 [Building MVC pattern project by Visual Studio 2017 ( ASP.Net framework Part )](https://davidskyspace.com/building-mvc-pattern-project-by-visual-studio-2017-asp-net-framework-part/)
