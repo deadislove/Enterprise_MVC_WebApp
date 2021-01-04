@@ -19,6 +19,8 @@ It is based on the ASP.NET framework v4.8.
 [Building MVC pattern project by Visual Studio 2017 ( ASP.Net framework Part )](https://davidskyspace.com/building-mvc-pattern-project-by-visual-studio-2017-asp-net-framework-part/)
 \
 [Aspect-oriented programming in .NET MVC](https://davidskyspace.com/aspect-oriented-programming-in-net-mvc/)
+\
+[Extended Aspect-Oriented Programming (AOP) in .NET MVC](#)
 
 ## Release Notification
 - Add AOP source code.
