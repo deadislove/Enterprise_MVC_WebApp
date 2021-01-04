@@ -23,8 +23,9 @@ It is based on the ASP.NET framework v4.8.
 [Extended Aspect-Oriented Programming (AOP) in .NET MVC](#)
 
 ## Release Notification
-- Add AOP source code.
+- Add Extended AOP source code.
 
 ## History
+- 01/07/2021 Add the Extended Aspect-Oriented Programming in .NET MVC.
 - 12/24/2020 Add Asptect-oriented programming in .NET MVC (Custom action filter).
-- 12/3/2020 Add the ASP.NET MVC web application of the Enterprise architecture level. 
+- 12/3/2020 Add the ASP.NET MVC web application of the Enterprise architecture level.
