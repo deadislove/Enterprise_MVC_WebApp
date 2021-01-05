@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Enterprise_MVC_WebApplication.Core.Interceptor;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Enterprise_MVC_WebApplication.Core
 {
-    public class Enterprise_MVC_Core
+    [InterceptorOfCore]
+    public class Enterprise_MVC_Core : ContextBoundObject
     {
         public int ID { get; set; } = 0;
 

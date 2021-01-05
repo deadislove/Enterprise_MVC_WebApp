@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Enterprise_MVC_WebApplication.Core;
 using Enterprise_MVC_WebApplication.Core.Interface;
+using Enterprise_MVC_WebApplication.Infra.Interceptor;
 
 namespace Enterprise_MVC_WebApplication.Infra
 {
-    public class Enterprise_MVC_Repository :IEnterprise_MVC_CoreRepository
+    [InterceptorOfInfra]
+    public class Enterprise_MVC_Repository : ContextBoundObject, IEnterprise_MVC_CoreRepository
     {
-        TestEntities context = new TestEntities();
+        TestEntities context = new TestEntities();               
 
         public void Add(Core.Enterprise_MVC_Core o)
         {

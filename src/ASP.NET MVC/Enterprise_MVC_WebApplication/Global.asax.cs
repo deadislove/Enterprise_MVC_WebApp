@@ -13,6 +13,7 @@ namespace Enterprise_MVC_WebApplication
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            
         }
     }
 }

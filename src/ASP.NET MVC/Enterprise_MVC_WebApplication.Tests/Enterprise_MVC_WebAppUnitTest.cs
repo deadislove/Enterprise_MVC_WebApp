@@ -1,7 +1,5 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Enterprise_MVC_WebApplication.Core.Interface;
-using Enterprise_MVC_WebApplication.Core;
 using Enterprise_MVC_WebApplication.Infra;
 
 namespace Enterprise_MVC_WebApplication.Tests
