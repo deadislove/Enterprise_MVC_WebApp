@@ -21,7 +21,7 @@ It is based on the ASP.NET framework v4.8.
 \
 [Aspect-oriented programming in .NET MVC](https://davidskyspace.com/aspect-oriented-programming-in-net-mvc/)
 \
-[Extended Aspect-Oriented Programming (AOP) in .NET MVC](#)
+[Extended Aspect-Oriented Programming (AOP) in .NET MVC](https://davidskyspace.com/extended-aspect-oriented-programming-aop-in-net-mvc/)
 
 ## Release Notification
 - Add Extended AOP source code.
