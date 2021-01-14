@@ -17,18 +17,9 @@ namespace Enterprise_Dot_Net_Core_WebApp.Logging.Repository
         public override void OnActionExecuting(ActionExecutingContext context)
         {
             _logger.LogInformation("ClassFilter OnActionExecuting");
-            base.OnActionExecuting(context);
-        }
 
-        public override void OnActionExecuted(ActionExecutedContext context)
-        {
-            _logger.LogInformation("ClassFilter OnActionExecuted");
-            base.OnActionExecuted(context);
-        }
-
-        public override void OnResultExecuting(ResultExecutingContext context)
-        {
-            _logger.LogInformation("ClassFilter OnResultExecuting");
+            if (context.ActionArguments.Count != 0)
+                _logger.LogInformation("Parameter: " + JsonConvert.SerializeObject(context.ActionArguments.Values));
 
             if (context.Result != null)
             {
@@ -52,6 +43,20 @@ namespace Enterprise_Dot_Net_Core_WebApp.Logging.Repository
                 }
 
             }
+
+            base.OnActionExecuting(context);
+        }
+
+        public override void OnActionExecuted(ActionExecutedContext context)
+        {
+            _logger.LogInformation("ClassFilter OnActionExecuted");
+            base.OnActionExecuted(context);
+        }
+
+        public override void OnResultExecuting(ResultExecutingContext context)
+        {
+            _logger.LogInformation("ClassFilter OnResultExecuting");
+                        
             base.OnResultExecuting(context);
         }
 

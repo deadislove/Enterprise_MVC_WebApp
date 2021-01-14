@@ -259,3 +259,4 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/src/ASP.NET Core/Enterprise_Dot_Net_Core_WebApp/Logs/Log-20210106.txt

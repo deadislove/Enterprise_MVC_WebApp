@@ -42,9 +42,12 @@ namespace Enterprise_Dot_Net_Core_WebApp
             services.AddDbContext<DemoDbContext>(
                 option => option.UseSqlServer(Configuration.GetConnectionString("DB_EntityString")));
 
+            // Basic CRUD Scoped
             services.AddScoped(typeof(IEnterprise_MVC_CoreRepository), typeof(Enterprise_MVC_Repository));
             //AOP Scoped
             services.AddScoped(typeof(ILogRepository), typeof(LogRepository));
+            // Generic type CRUD Scoped
+            services.AddScoped(typeof(IGenericTypeRepository<>), typeof(GenericTypeRepository<>));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
