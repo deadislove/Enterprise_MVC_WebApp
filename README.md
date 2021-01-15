@@ -36,6 +36,7 @@ This repository provide the enterprise architecture level sample projects. The g
 \
 [Generic Type in Repository - .NET Core Part](https://davidskyspace.com/generic-type-in-repository-net-core-part/)
 
+### Other PART:
 
 ## Project Explorer
 ### ASP.NET MVC PART
