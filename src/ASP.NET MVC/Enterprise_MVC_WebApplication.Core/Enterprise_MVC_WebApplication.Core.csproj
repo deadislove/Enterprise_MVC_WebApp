@@ -52,6 +52,9 @@
     <Compile Include="Interceptor\InterceptorHandler.cs" />
     <Compile Include="Interceptor\InterceptorOfCoreAttribute.cs" />
     <Compile Include="Interface\IEnterprise_MVC_CoreRepository.cs" />
+    <Compile Include="Interface\IGenericTypeRepository.cs" />
+    <Compile Include="Interface\ITransactionRepository.cs" />
+    <Compile Include="Interface\ITransactionScopeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

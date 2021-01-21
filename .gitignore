@@ -260,3 +260,19 @@ paket-files/
 __pycache__/
 *.pyc
 /src/ASP.NET Core/Enterprise_Dot_Net_Core_WebApp/Logs/Log-20210106.txt
+/src/ASP.NET MVC/Enterprise_MVC_WebApplication/Controllers/TransactionController.cs
+/src/ASP.NET MVC/Enterprise_MVC_WebApplication/Controllers/TransactionScopeController.cs
+/src/ASP.NET MVC/Enterprise_MVC_WebApplication/Views/Transaction/Index.cshtml
+/src/ASP.NET MVC/Enterprise_MVC_WebApplication/Views/Transaction/Edit.cshtml
+/src/ASP.NET MVC/Enterprise_MVC_WebApplication/Views/Transaction/Details.cshtml
+/src/ASP.NET MVC/Enterprise_MVC_WebApplication/Views/Transaction/Delete.cshtml
+/src/ASP.NET MVC/Enterprise_MVC_WebApplication/Views/Transaction/Create.cshtml
+/src/ASP.NET MVC/Enterprise_MVC_WebApplication/Views/TransactionScope/Index.cshtml
+/src/ASP.NET MVC/Enterprise_MVC_WebApplication/Views/TransactionScope/Edit.cshtml
+/src/ASP.NET MVC/Enterprise_MVC_WebApplication/Views/TransactionScope/Details.cshtml
+/src/ASP.NET MVC/Enterprise_MVC_WebApplication/Views/TransactionScope/Delete.cshtml
+/src/ASP.NET MVC/Enterprise_MVC_WebApplication/Views/TransactionScope/Create.cshtml
+/src/ASP.NET MVC/Enterprise_MVC_WebApplication.Core/Interface/ITransactionScopeRepository.cs
+/src/ASP.NET MVC/Enterprise_MVC_WebApplication.Core/Interface/ITransactionRepository.cs
+/src/ASP.NET MVC/Enterprise_MVC_WebApplication.Infra/Repositories/TransactionScopeRepository.cs
+/src/ASP.NET MVC/Enterprise_MVC_WebApplication.Infra/Repositories/TransactionRepository.cs

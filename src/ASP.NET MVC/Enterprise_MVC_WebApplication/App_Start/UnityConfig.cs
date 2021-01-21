@@ -1,9 +1,8 @@
 using System;
-using Enterprise_MVC_WebApplication.Core;
 using Enterprise_MVC_WebApplication.Core.Interface;
 using Enterprise_MVC_WebApplication.Infra;
+using Enterprise_MVC_WebApplication.Infra.Repositories;
 using Enterprise_MVC_WebApplication.Logging;
-
 using Unity;
 
 namespace Enterprise_MVC_WebApplication
@@ -47,6 +46,9 @@ namespace Enterprise_MVC_WebApplication
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
             container.RegisterType<IEnterprise_MVC_CoreRepository, Enterprise_MVC_Repository>();
+            container.RegisterType(typeof(IGenericTypeRepository<>), typeof(GenericTypeRepository<>));
+            container.RegisterType(typeof(ITransactionRepository<>), typeof(TransactionRepository<>));
+            container.RegisterType(typeof(ITransactionScopeRepository<>), typeof(TransactionScopeRepository<>));
             container.RegisterType<LogAttribute>();
             container.RegisterType<ExtendedActionAttribute>();
         }

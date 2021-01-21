@@ -152,7 +152,10 @@
     <Compile Include="Controllers\ActionFilterController.cs" />
     <Compile Include="Controllers\Enterprise_MVC_WebAppController.cs" />
     <Compile Include="Controllers\ExtendedActionFilterController.cs" />
+    <Compile Include="Controllers\GenericTypeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TransactionController.cs" />
+    <Compile Include="Controllers\TransactionScopeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -184,6 +187,21 @@
     <Content Include="Views\ExtendedActionFilter\Edit.cshtml" />
     <Content Include="Views\ExtendedActionFilter\Delete.cshtml" />
     <Content Include="Views\ExtendedActionFilter\Create.cshtml" />
+    <Content Include="Views\GenericType\Index.cshtml" />
+    <Content Include="Views\GenericType\Edit.cshtml" />
+    <Content Include="Views\GenericType\Details.cshtml" />
+    <Content Include="Views\GenericType\Delete.cshtml" />
+    <Content Include="Views\GenericType\Create.cshtml" />
+    <Content Include="Views\Transaction\Index.cshtml" />
+    <Content Include="Views\Transaction\Edit.cshtml" />
+    <Content Include="Views\Transaction\Details.cshtml" />
+    <Content Include="Views\Transaction\Delete.cshtml" />
+    <Content Include="Views\Transaction\Create.cshtml" />
+    <Content Include="Views\TransactionScope\Index.cshtml" />
+    <Content Include="Views\TransactionScope\Edit.cshtml" />
+    <Content Include="Views\TransactionScope\Details.cshtml" />
+    <Content Include="Views\TransactionScope\Delete.cshtml" />
+    <Content Include="Views\TransactionScope\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
