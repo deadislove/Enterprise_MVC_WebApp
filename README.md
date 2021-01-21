@@ -28,6 +28,8 @@ This repository provide the enterprise architecture level sample projects. The g
 [Aspect-oriented programming in .NET MVC](https://davidskyspace.com/aspect-oriented-programming-in-net-mvc/)
 \
 [Extended Aspect-Oriented Programming (AOP) in .NET MVC](https://davidskyspace.com/extended-aspect-oriented-programming-aop-in-net-mvc/)
+\
+[Generic Type in Repository - .NET MVC Part](https://davidskyspace.com/generic-type-in-repository-net-mvc-part/)
 
 ### ASP.NET Core PART
 [Building MVC pattern project by Visual Studio 2017 ( ASP.Net Core Part )](https://davidskyspace.com/building-mvc-pattern-project-by-visual-studio-2017-asp-net-core-part/)
