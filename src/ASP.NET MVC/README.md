@@ -22,11 +22,14 @@ It is based on the ASP.NET framework v4.8.
 [Aspect-oriented programming in .NET MVC](https://davidskyspace.com/aspect-oriented-programming-in-net-mvc/)
 \
 [Extended Aspect-Oriented Programming (AOP) in .NET MVC](https://davidskyspace.com/extended-aspect-oriented-programming-aop-in-net-mvc/)
+\
+[Generic Type in Repository - .NET MVC Part](https://davidskyspace.com/generic-type-in-repository-net-mvc-part/)
 
 ## Release Notification
 - Add Extended AOP source code.
 
 ## History
+- 01/21/2021 Add the generic type in the repository.
 - 01/07/2021 Add the Extended Aspect-Oriented Programming in .NET MVC.
 - 12/24/2020 Add Asptect-oriented programming in .NET MVC (Custom action filter).
 - 12/3/2020 Add the ASP.NET MVC web application of the Enterprise architecture level.
