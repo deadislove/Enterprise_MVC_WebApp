@@ -115,7 +115,9 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories
                 await Task.Run(() => dbContext.Set<T>().AddAsync(entity: entity, cancellationToken: token));
             }
             catch (Exception e)
-            { }
+            {
+                throw e;
+            }
             finally
             {
                 await dbContext.SaveChangesAsync();

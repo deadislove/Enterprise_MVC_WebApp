@@ -48,6 +48,11 @@ namespace Enterprise_Dot_Net_Core_WebApp
             services.AddScoped(typeof(ILogRepository), typeof(LogRepository));
             // Generic type CRUD Scoped
             services.AddScoped(typeof(IGenericTypeRepository<>), typeof(GenericTypeRepository<>));
+            // Transaction
+            services.AddScoped(typeof(ITransactionRepository<>), typeof(TransactionRepository<>));
+            // Transaction Scope
+            services.AddScoped(typeof(ITransactionScopeRepository<>), typeof(TransactionScopeRepository<>));
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
