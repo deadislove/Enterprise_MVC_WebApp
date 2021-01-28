@@ -24,11 +24,15 @@ It is based on the ASP.NET framework v4.8.
 [Extended Aspect-Oriented Programming (AOP) in .NET MVC](https://davidskyspace.com/extended-aspect-oriented-programming-aop-in-net-mvc/)
 \
 [Generic Type in Repository - .NET MVC Part](https://davidskyspace.com/generic-type-in-repository-net-mvc-part/)
+\
+[CRUD – Transaction Behavior in Entity Framework Core](https://davidskyspace.com/crud-transaction-behavior-in-entity-framework-core/)
+
 
 ## Release Notification
-- Add Extended AOP source code.
+- Add the transaction behavior sample code
 
 ## History
+- 01/28/2021 Add the transaction behavior sample code
 - 01/21/2021 Add the generic type in the repository.
 - 01/07/2021 Add the Extended Aspect-Oriented Programming in .NET MVC.
 - 12/24/2020 Add Asptect-oriented programming in .NET MVC (Custom action filter).
