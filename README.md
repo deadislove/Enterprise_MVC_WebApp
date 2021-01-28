@@ -31,15 +31,15 @@ This repository provide the enterprise architecture level sample projects. The g
 \
 [Generic Type in Repository - .NET MVC Part](https://davidskyspace.com/generic-type-in-repository-net-mvc-part/)
 
-### ASP.NET Core PART
+### ASP.NET CORE PART
 [Building MVC pattern project by Visual Studio 2017 ( ASP.Net Core Part )](https://davidskyspace.com/building-mvc-pattern-project-by-visual-studio-2017-asp-net-core-part/)
 \
 [Aspect-oriented programming in .NET Core](https://davidskyspace.com/aspect-oriented-programming-in-net-core/)
 \
 [Generic Type in Repository - .NET Core Part](https://davidskyspace.com/generic-type-in-repository-net-core-part/)
 
-### Other PART:
-
+### OTHER PART:
+[CRUD – Transaction Behavior in Entity Framework Core](https://davidskyspace.com/crud-transaction-behavior-in-entity-framework-core/)
 ## Project Explorer
 ### ASP.NET MVC PART
  - Enterprise_MVC_Web_App
