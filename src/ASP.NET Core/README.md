@@ -25,10 +25,13 @@ It is based on the ASP.NET Core framework v2.8.
 [Aspect-oriented programming in .NET Core](https://davidskyspace.com/aspect-oriented-programming-in-net-core/)
 \
 [Generic Type in Repository - .NET Core Part](https://davidskyspace.com/generic-type-in-repository-net-core-part/)
+\
+[CRUD – Transaction Behavior in Entity Framework Core](https://davidskyspace.com/crud-transaction-behavior-in-entity-framework-core/)
 
 ## Release Notification
-- 12/17/2020 Add AOP
+- 01/28/2021 Add the transaction behavior sample code
 
 ## History
+- 01/28/2021 Add the transaction behavior sample code
 - 12/17/2020 Add AOP
 - 12/7/2020 Add project to GitHub platform.
