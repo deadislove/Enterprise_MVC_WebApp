@@ -40,6 +40,7 @@ This repository provide the enterprise architecture level sample projects. The g
 
 ### OTHER PART:
 [CRUD – Transaction Behavior in Entity Framework Core](https://davidskyspace.com/crud-transaction-behavior-in-entity-framework-core/)
+
 ## Project Explorer
 ### ASP.NET MVC PART
  - Enterprise_MVC_Web_App
