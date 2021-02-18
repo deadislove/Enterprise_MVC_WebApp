@@ -3,7 +3,7 @@
 Every week, I will post new articles about the ASP.NET MVC or ASP.NET Core.
 \
 \
-Blog link: [David Sky Space](https://davidskyspace.com/)
+Blog link: [David Weblog](https://davidskyspace.com/)
 \
 \
 If you like my blog and Github, please donate to me and let me have the power to write the next article.
