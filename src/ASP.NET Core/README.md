@@ -27,11 +27,14 @@ It is based on the ASP.NET Core framework v2.8.
 [Generic Type in Repository - .NET Core Part](https://davidskyspace.com/generic-type-in-repository-net-core-part/)
 \
 [CRUD – Transaction Behavior in Entity Framework Core](https://davidskyspace.com/crud-transaction-behavior-in-entity-framework-core/)
+\
+[Creational Patterns - Abstract Factory](https://davidskyspace.com/creational-patterns-abstract-factory/)
 
 ## Release Notification
-- 01/28/2021 Add the transaction behavior sample code
+- 02/18/2021 Creational Patterns
 
 ## History
+- 02/18/2021 Creational Patterns
 - 01/28/2021 Add the transaction behavior sample code
 - 12/17/2020 Add AOP
 - 12/7/2020 Add project to GitHub platform.
