@@ -14,6 +14,10 @@ If you like my blog and Github, please donate to me and let me have the power to
 This repository provide the enterprise architecture level sample projects. The guide article will be in my blog web site. You can follow the reference link.
 
 ## Developed environment
+### .NET 5 project environment
+Wating...
+
+### .NET Core 2.8 & .NET 4.8 project environment
 **Complier**: Visual Studio 2017\
 **OS**: Windows 10\
 **Framework**: .NET framework 4.8 & .Net Core 2.8 framework\
