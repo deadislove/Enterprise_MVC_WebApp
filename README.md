@@ -37,9 +37,12 @@ This repository provide the enterprise architecture level sample projects. The g
 [Aspect-oriented programming in .NET Core](https://davidskyspace.com/aspect-oriented-programming-in-net-core/)
 \
 [Generic Type in Repository - .NET Core Part](https://davidskyspace.com/generic-type-in-repository-net-core-part/)
+\
+[Creational Patterns - Abstract Factory](https://davidskyspace.com/creational-patterns-abstract-factory/)
 
 ### OTHER PART:
 [CRUD – Transaction Behavior in Entity Framework Core](https://davidskyspace.com/crud-transaction-behavior-in-entity-framework-core/)
+
 
 ## Project Explorer
 ### ASP.NET MVC PART
