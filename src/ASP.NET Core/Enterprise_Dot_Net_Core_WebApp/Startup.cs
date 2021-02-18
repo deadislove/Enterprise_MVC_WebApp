@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Enterprise_Dot_Net_Core_WebApp.Infra.DBContext;
+﻿using Enterprise_Dot_Net_Core_WebApp.Infra.DBContext;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -11,12 +7,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface;
-using Enterprise_Dot_Net_Core_WebApp.Core.Entities;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories;
 using Enterprise_Dot_Net_Core_WebApp.Logging.Interface;
 using Enterprise_Dot_Net_Core_WebApp.Logging.Repository;
 using System.IO;
 using Microsoft.Extensions.Logging;
+using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.AbstractFactory;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.AbstractFactory;
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -53,6 +50,12 @@ namespace Enterprise_Dot_Net_Core_WebApp
             // Transaction Scope
             services.AddScoped(typeof(ITransactionScopeRepository<>), typeof(TransactionScopeRepository<>));
 
+            /* Design pattern
+             */
+            // Abstract Factory
+            services.AddScoped(typeof(IAbstractFactory<>), typeof(AbstractFactoryRepo<>));
+            services.AddScoped(typeof(IAbstractFactoryA<>), typeof(AbstractFactoryA_Repository<>));
+            services.AddScoped(typeof(IAbstractFactoryB<>), typeof(AbstractFactoryB_Repository<>));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
