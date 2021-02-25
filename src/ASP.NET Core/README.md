@@ -29,11 +29,14 @@ It is based on the ASP.NET Core framework v2.8.
 [CRUD – Transaction Behavior in Entity Framework Core](https://davidskyspace.com/crud-transaction-behavior-in-entity-framework-core/)
 \
 [Creational Patterns - Abstract Factory](https://davidskyspace.com/creational-patterns-abstract-factory/)
+\
+[Creational Patterns – Builder](https://davidskyspace.com/creational-patterns-builder/)
 
 ## Release Notification
-- 02/18/2021 Creational Patterns
+- 02/25/2021 Creational Patterns - Builder
 
 ## History
+- 02/25/2021 Creational Patterns - Builder
 - 02/18/2021 Creational Patterns
 - 01/28/2021 Add the transaction behavior sample code
 - 12/17/2020 Add AOP
