@@ -7,7 +7,7 @@
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_MVC_OlderPost)
 ### .NET Core
 + News
-  - [Creational Patterns - Abstract Factory](https://davidskyspace.com/creational-patterns-abstract-factory/)
+  - [Creational Patterns – Builder](https://davidskyspace.com/creational-patterns-builder/)
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_Core_OlderPost)
 ### Other
 + News
