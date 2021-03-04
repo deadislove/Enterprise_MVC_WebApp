@@ -31,11 +31,14 @@ It is based on the ASP.NET Core framework v2.8.
 [Creational Patterns - Abstract Factory](https://davidskyspace.com/creational-patterns-abstract-factory/)
 \
 [Creational Patterns – Builder](https://davidskyspace.com/creational-patterns-builder/)
+\
+[Creational Patterns - Factory Method](https://davidskyspace.com/creational-patterns-factory-method/)
 
 ## Release Notification
-- 02/25/2021 Creational Patterns - Builder
+- 03/04/2021 Creational Patterns - Factory Method
 
 ## History
+- 03/04/2021 Creational Patterns - Factory Method
 - 02/25/2021 Creational Patterns - Builder
 - 02/18/2021 Creational Patterns
 - 01/28/2021 Add the transaction behavior sample code
