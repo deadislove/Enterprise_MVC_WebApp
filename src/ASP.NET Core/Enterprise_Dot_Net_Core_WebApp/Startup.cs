@@ -14,6 +14,8 @@ using System.IO;
 using Microsoft.Extensions.Logging;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.AbstractFactory;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.AbstractFactory;
+using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Builder;
+using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.FactoryMethod;
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -37,7 +39,7 @@ namespace Enterprise_Dot_Net_Core_WebApp
             });
 
             services.AddDbContext<DemoDbContext>(
-                option => option.UseSqlServer(Configuration.GetConnectionString("DB_EntityString")));
+                option => option.UseSqlServer(Configuration.GetConnectionString("DB_EntityString")),ServiceLifetime.Transient);
 
             // Basic CRUD Scoped
             services.AddScoped(typeof(IEnterprise_MVC_CoreRepository), typeof(Enterprise_MVC_Repository));
@@ -56,6 +58,10 @@ namespace Enterprise_Dot_Net_Core_WebApp
             services.AddScoped(typeof(IAbstractFactory<>), typeof(AbstractFactoryRepo<>));
             services.AddScoped(typeof(IAbstractFactoryA<>), typeof(AbstractFactoryA_Repository<>));
             services.AddScoped(typeof(IAbstractFactoryB<>), typeof(AbstractFactoryB_Repository<>));
+            // Builder
+            services.AddScoped(typeof(IBuilder<>), typeof(BuilderRepo<>));
+            // Factory Method
+            services.AddScoped(typeof(IFactoryMethod<>), typeof(FactoryMethodRepoA<>));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
