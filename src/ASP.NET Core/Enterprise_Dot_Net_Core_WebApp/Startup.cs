@@ -16,6 +16,11 @@ using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.AbstractFactory
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.AbstractFactory;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Builder;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.FactoryMethod;
+//Object Pooling patterns
+using Microsoft.Extensions.ObjectPool;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using System.Text;
+using Enterprise_Dot_Net_Core_WebApp.Middleware;
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -62,6 +67,13 @@ namespace Enterprise_Dot_Net_Core_WebApp
             services.AddScoped(typeof(IBuilder<>), typeof(BuilderRepo<>));
             // Factory Method
             services.AddScoped(typeof(IFactoryMethod<>), typeof(FactoryMethodRepoA<>));
+            // Object Pool
+            services.TryAddSingleton<ObjectPoolProvider, DefaultObjectPoolProvider>();
+            services.TryAddSingleton<ObjectPool<StringBuilder>>(serviceProvider => {
+                var provider = serviceProvider.GetRequiredService<ObjectPoolProvider>();
+                var policy = new StringBuilderPooledObjectPolicy();
+                return provider.Create(policy);
+            });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -81,6 +93,10 @@ namespace Enterprise_Dot_Net_Core_WebApp
             //Add log file path
             var path = Directory.GetCurrentDirectory();
             loggerFactory.AddFile($"{path}\\Logs\\Log.txt");
+
+            // Middleware - Object Pooling
+            //Test using /?Id=123&day=28&month=9
+            app.UseMiddleware<ObjectPoolingMiddleware>();
 
             app.UseStaticFiles();
             app.UseCookiePolicy();
