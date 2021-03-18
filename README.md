@@ -49,6 +49,8 @@ Wating...
 [Creational Patterns - Factory Method](https://davidskyspace.com/creational-patterns-factory-method/)
 \
 [Creational Patterns – Object Pool](davidskyspace.com/creational-patterns-object-pool/)
+\
+[Creational Patterns - Prototype](https://davidskyspace.com/creational-patterns-prototype/)
 
 ### OTHER PART:
 [CRUD – Transaction Behavior in Entity Framework Core](https://davidskyspace.com/crud-transaction-behavior-in-entity-framework-core/)
