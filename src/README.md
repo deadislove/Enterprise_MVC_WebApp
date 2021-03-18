@@ -1,5 +1,5 @@
 # News
-**<div align="right">Date: Feb, 2021</div>**
+**<div align="right">Date: March, 2021</div>**
 
 ### .NET MVC
 + News
@@ -7,7 +7,7 @@
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_MVC_OlderPost)
 ### .NET Core
 + News
-  - [Creational Patterns – Object Pool](davidskyspace.com/creational-patterns-object-pool/)
+  - [Creational Patterns - Prototype](https://davidskyspace.com/creational-patterns-prototype/)
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_Core_OlderPost)
 ### Other
 + News
