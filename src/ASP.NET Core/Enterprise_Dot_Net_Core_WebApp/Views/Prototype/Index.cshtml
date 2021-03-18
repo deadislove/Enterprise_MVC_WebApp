@@ -1,0 +1,227 @@
+﻿@model Tuple<
+            Enterprise_Dot_Net_Core_WebApp.Core.Entities.PrototypeEntity,
+            Enterprise_Dot_Net_Core_WebApp.Core.Entities.PrototypeEntity,
+            Enterprise_Dot_Net_Core_WebApp.Core.Entities.PrototypeEntity
+            >
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1> Prototype - Index</h1>
+<h2>Before</h2>
+<h3>Prototype - initialization</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.IdInfo.IdNumber)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @ViewData["Item1_ID"]
+            </td>
+            <td>
+                @ViewData["Item1_Name"]
+            </td>
+            <td>
+                @ViewData["Item1_Age"]
+            </td>
+            <td>
+                @ViewData["Item1_Guid"]
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Prototype - ShallowCopy()</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item2.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item2.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item2.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item2.IdInfo.IdNumber)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @ViewData["Item2_ID"]
+            </td>
+            <td>
+                @ViewData["Item2_Name"]
+            </td>
+            <td>
+                @ViewData["Item2_Age"]
+            </td>
+            <td>
+                @ViewData["Item2_Guid"]
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Prototype - DeepCopy()</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item3.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item3.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item3.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item3.IdInfo.IdNumber)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @ViewData["Item3_ID"]
+            </td>
+            <td>
+                @ViewData["Item3_Name"]
+            </td>
+            <td>
+                @ViewData["Item3_Age"]
+            </td>
+            <td>
+                @ViewData["Item3_Guid"]
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>After</h2>
+<h3>Prototype - initialization has changed.</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.IdInfo.IdNumber)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Item1.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Item1.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Item1.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Item1.IdInfo.IdNumber)
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Prototype - ShallowCopy()</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item2.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item2.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item2.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item2.IdInfo.IdNumber)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Item2.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Item2.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Item2.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Item2.IdInfo.IdNumber)
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Prototype - DeepCopy()</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item3.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item3.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item3.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item3.IdInfo.IdNumber)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Item3.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Item3.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Item3.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Item3.IdInfo.IdNumber)
+            </td>
+        </tr>
+    </tbody>
+</table>

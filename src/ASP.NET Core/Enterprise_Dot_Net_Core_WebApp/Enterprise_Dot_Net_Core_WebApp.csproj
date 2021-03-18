@@ -22,4 +22,9 @@
     <ProjectReference Include="..\Enterprise_Dot_Net_Core_WebApp.Infra\Enterprise_Dot_Net_Core_WebApp.Infra.csproj" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="Logs\" />
+  </ItemGroup>
+
 </Project>

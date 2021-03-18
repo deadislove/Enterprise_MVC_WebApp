@@ -12,15 +12,19 @@ using Enterprise_Dot_Net_Core_WebApp.Logging.Interface;
 using Enterprise_Dot_Net_Core_WebApp.Logging.Repository;
 using System.IO;
 using Microsoft.Extensions.Logging;
+// Design patterns
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.AbstractFactory;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.AbstractFactory;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Builder;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.FactoryMethod;
+using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Prototype;
+using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Singleton;
 //Object Pooling patterns
 using Microsoft.Extensions.ObjectPool;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using System.Text;
 using Enterprise_Dot_Net_Core_WebApp.Middleware;
+
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -74,6 +78,10 @@ namespace Enterprise_Dot_Net_Core_WebApp
                 var policy = new StringBuilderPooledObjectPolicy();
                 return provider.Create(policy);
             });
+            // Prototype
+            services.AddScoped(typeof(IPrototype<>), typeof(PrototypeRepo<>));
+            // Singleton
+            services.AddSingleton(typeof(ISingletonRepo<>), typeof(SingletonRepo<>));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
