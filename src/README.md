@@ -7,7 +7,7 @@
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_MVC_OlderPost)
 ### .NET Core
 + News
-  - [Creational Patterns - Prototype](https://davidskyspace.com/creational-patterns-prototype/)
+  - [Creational Patterns – Singleton](https://davidskyspace.com/creational-patterns-singleton/)
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_Core_OlderPost)
 ### Other
 + News
