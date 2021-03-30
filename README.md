@@ -33,24 +33,24 @@ Wating...
 \
 [Extended Aspect-Oriented Programming (AOP) in .NET MVC](https://davidskyspace.com/extended-aspect-oriented-programming-aop-in-net-mvc/)
 \
-[Generic Type in Repository - .NET MVC Part](https://davidskyspace.com/generic-type-in-repository-net-mvc-part/)
+[Generic Type in Repository – .NET MVC Part](https://davidskyspace.com/generic-type-in-repository-net-mvc-part/)
 
 ### ASP.NET CORE PART
 [Building MVC pattern project by Visual Studio 2017 ( ASP.Net Core Part )](https://davidskyspace.com/building-mvc-pattern-project-by-visual-studio-2017-asp-net-core-part/)
 \
 [Aspect-oriented programming in .NET Core](https://davidskyspace.com/aspect-oriented-programming-in-net-core/)
 \
-[Generic Type in Repository - .NET Core Part](https://davidskyspace.com/generic-type-in-repository-net-core-part/)
+[Generic Type in Repository – .NET Core Part](https://davidskyspace.com/generic-type-in-repository-net-core-part/)
 \
-[Creational Patterns - Abstract Factory](https://davidskyspace.com/creational-patterns-abstract-factory/)
+[Creational Patterns – Abstract Factory](https://davidskyspace.com/creational-patterns-abstract-factory/)
 \
 [Creational Patterns – Builder](https://davidskyspace.com/creational-patterns-builder/)
 \
-[Creational Patterns - Factory Method](https://davidskyspace.com/creational-patterns-factory-method/)
+[Creational Patterns – Factory Method](https://davidskyspace.com/creational-patterns-factory-method/)
 \
 [Creational Patterns – Object Pool](davidskyspace.com/creational-patterns-object-pool/)
 \
-[Creational Patterns - Prototype](https://davidskyspace.com/creational-patterns-prototype/)
+[Creational Patterns – Prototype](https://davidskyspace.com/creational-patterns-prototype/)
 \
 [Creational Patterns – Singleton](https://davidskyspace.com/creational-patterns-singleton/)
 
