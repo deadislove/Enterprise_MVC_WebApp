@@ -44,6 +44,7 @@ It is based on the ASP.NET Core framework v2.8.
 - 03/25/2021 Creational Patterns – Singleton
 
 ## History
+- 03/25/2021 Creational Patterns – Singleton
 - 03/18/2021 Creational Patterns - Prototype
 - 03/11/2021 Creational Patterns - Object Pool
 - 03/04/2021 Creational Patterns - Factory Method
