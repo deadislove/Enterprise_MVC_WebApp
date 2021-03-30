@@ -15,14 +15,18 @@ This repository provide the enterprise architecture level sample projects. The g
 
 ## Developed environment
 ### .NET 5 project environment
-Wating...
+**Complier**: Visual Studio 2019 Enterprise version\
+**OS**: Windows 10\
+**Framework**: .NET framework 4.8\
+**Running environment**: Windows server/ IIS 10\
+**Common Language Runtime(CLR)**: CLR 4.0.3
 
 ### .NET Core 2.8 & .NET 4.8 project environment
-**Complier**: Visual Studio 2017\
+**Complier**: Visual Studio 2017 Professional version\
 **OS**: Windows 10\
 **Framework**: .NET framework 4.8 & .Net Core 2.8 framework\
 **Running environment**: Windows server/ IIS 10\
-**Common Language Runtime(CLR)**: CLR 4.0
+**Common Language Runtime(CLR)**: CLR 4.0.3
 
 ## Reference artical link
 
