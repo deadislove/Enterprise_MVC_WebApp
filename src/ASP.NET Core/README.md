@@ -37,9 +37,11 @@ It is based on the ASP.NET Core framework v2.8.
 [Creational Patterns – Object Pool](davidskyspace.com/creational-patterns-object-pool/)
 \
 [Creational Patterns - Prototype](https://davidskyspace.com/creational-patterns-prototype/)
+\
+[Creational Patterns – Singleton](https://davidskyspace.com/creational-patterns-singleton/)
 
 ## Release Notification
-- 03/18/2021 Creational Patterns - Prototype
+- 03/25/2021 Creational Patterns – Singleton
 
 ## History
 - 03/18/2021 Creational Patterns - Prototype
