@@ -24,7 +24,10 @@ using Microsoft.Extensions.ObjectPool;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using System.Text;
 using Enterprise_Dot_Net_Core_WebApp.Middleware;
-
+// Design patterns
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Singleton;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Adapter;
+using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Adapter;
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -73,15 +76,23 @@ namespace Enterprise_Dot_Net_Core_WebApp
             services.AddScoped(typeof(IFactoryMethod<>), typeof(FactoryMethodRepoA<>));
             // Object Pool
             services.TryAddSingleton<ObjectPoolProvider, DefaultObjectPoolProvider>();
-            services.TryAddSingleton<ObjectPool<StringBuilder>>(serviceProvider => {
+            services.TryAddSingleton<ObjectPool<StringBuilder>>(serviceProvider =>
+            {
                 var provider = serviceProvider.GetRequiredService<ObjectPoolProvider>();
                 var policy = new StringBuilderPooledObjectPolicy();
                 return provider.Create(policy);
             });
             // Prototype
             services.AddScoped(typeof(IPrototype<>), typeof(PrototypeRepo<>));
-            // Singleton
-            services.AddSingleton(typeof(ISingletonRepo<>), typeof(SingletonRepo<>));
+            // Singleton            
+            services.AddSingleton<IOperationSingleton, Operation>();
+            // Adapter
+            services.AddScoped(typeof(IAdapter_Obj<>), typeof(AdapterRepo_Obj<>));
+            services.AddScoped(typeof(IAdapter_Class<>), typeof(AdapterRepo_Class<>));
+
+            // Service type method.
+            services.AddTransient<IOperationTransient, Operation>();
+            services.AddScoped<IOperationScoped, Operation>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

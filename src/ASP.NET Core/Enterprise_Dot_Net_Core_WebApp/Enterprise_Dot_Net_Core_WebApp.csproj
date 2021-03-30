@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <Folder Include="Logs\" />
+    <Folder Include="Views\Singleton\" />
   </ItemGroup>
 
 </Project>

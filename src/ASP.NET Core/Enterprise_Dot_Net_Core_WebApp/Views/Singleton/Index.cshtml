@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Enterprise_Dot_Net_Core_WebApp.Controllers.SingletonController.SingletonView>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Singleton - Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model=>model.FirstOrDefault().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().GuidID)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GuidID)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

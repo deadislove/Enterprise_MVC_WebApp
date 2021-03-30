@@ -276,3 +276,11 @@ __pycache__/
 /src/ASP.NET MVC/Enterprise_MVC_WebApplication.Core/Interface/ITransactionRepository.cs
 /src/ASP.NET MVC/Enterprise_MVC_WebApplication.Infra/Repositories/TransactionScopeRepository.cs
 /src/ASP.NET MVC/Enterprise_MVC_WebApplication.Infra/Repositories/TransactionRepository.cs
+/src/ASP.NET Core/Enterprise_Dot_Net_Core_WebApp/Controllers/AdapterController.cs
+/src/ASP.NET Core/Enterprise_Dot_Net_Core_WebApp/Views/Adapter/Index.cshtml
+/src/ASP.NET Core/Enterprise_Dot_Net_Core_WebApp.Core/Interface/DesignPatterns/Adapter/IAdapter_Obj.cs
+/src/ASP.NET Core/Enterprise_Dot_Net_Core_WebApp.Core/Interface/DesignPatterns/Adapter/IAdapter_Class.cs
+/src/ASP.NET Core/Enterprise_Dot_Net_Core_WebApp.Core/Interface/DesignPatterns/Adapter/Adaptee_Obj.cs
+/src/ASP.NET Core/Enterprise_Dot_Net_Core_WebApp.Core/Interface/DesignPatterns/Adapter/Adaptee_Class.cs
+/src/ASP.NET Core/Enterprise_Dot_Net_Core_WebApp.Infra/Repositories_Patterns/Adapter/AdapterRepo_Obj.cs
+/src/ASP.NET Core/Enterprise_Dot_Net_Core_WebApp.Infra/Repositories_Patterns/Adapter/AdapterRepo_Class.cs
