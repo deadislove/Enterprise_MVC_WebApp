@@ -51,6 +51,8 @@ Wating...
 [Creational Patterns – Object Pool](davidskyspace.com/creational-patterns-object-pool/)
 \
 [Creational Patterns - Prototype](https://davidskyspace.com/creational-patterns-prototype/)
+\
+[Creational Patterns – Singleton](https://davidskyspace.com/creational-patterns-singleton/)
 
 ### OTHER PART:
 [CRUD – Transaction Behavior in Entity Framework Core](https://davidskyspace.com/crud-transaction-behavior-in-entity-framework-core/)
