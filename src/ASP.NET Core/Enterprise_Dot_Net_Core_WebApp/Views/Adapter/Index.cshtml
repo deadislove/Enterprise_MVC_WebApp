@@ -1,0 +1,81 @@
+﻿@model Tuple<
+            IEnumerable<Enterprise_Dot_Net_Core_WebApp.Core.Entities.Enterprise_MVC_Core>,
+            IEnumerable < Enterprise_Dot_Net_Core_WebApp.Core.Entities.Enterprise_MVC_Core >
+        >
+
+@{
+    ViewData["Title"] = "Index";
+    }
+
+<h1>Adapter - Index</h1>
+<br\ />
+<h2>Object adapter sample: </h2>
+<h3>Spend time: @ViewData["objA_Time"]</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.FirstOrDefault().ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.FirstOrDefault().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.FirstOrDefault().Age)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Item1)
+{
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem =>item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+<h2>Class adapter sample: </h2>
+<h3>Spend time: @ViewData["objB_Time"]</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item2.FirstOrDefault().ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item2.FirstOrDefault().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item2.FirstOrDefault().Age)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Item2)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
