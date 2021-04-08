@@ -7,7 +7,7 @@
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_MVC_OlderPost)
 ### .NET Core
 + News
-  - [Creational Patterns – Singleton](https://davidskyspace.com/creational-patterns-singleton/)
+  - [Structural Patterns – Adapter](https://davidskyspace.com/structural-patterns-adapter/)
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_Core_OlderPost)
 ### Other
 + News
