@@ -28,6 +28,7 @@ using Enterprise_Dot_Net_Core_WebApp.Middleware;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Singleton;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Adapter;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Adapter;
+using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Bridge;
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -89,6 +90,9 @@ namespace Enterprise_Dot_Net_Core_WebApp
             // Adapter
             services.AddScoped(typeof(IAdapter_Obj<>), typeof(AdapterRepo_Obj<>));
             services.AddScoped(typeof(IAdapter_Class<>), typeof(AdapterRepo_Class<>));
+            // Bridge
+            services.AddScoped(typeof(IBridge), typeof(BridgeRepoA));
+            services.AddScoped(typeof(IBridge), typeof(BridgeRepoB));
 
             // Service type method.
             services.AddTransient<IOperationTransient, Operation>();
