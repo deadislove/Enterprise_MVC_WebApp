@@ -1,4 +1,4 @@
-﻿namespace Enterprise_Dot_Net_Core_WebApp.Core.Interface
+﻿namespace Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Prototype
 {
     public interface IPrototype<T> where T : class
     {

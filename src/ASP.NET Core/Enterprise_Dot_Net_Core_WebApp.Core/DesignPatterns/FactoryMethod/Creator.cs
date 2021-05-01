@@ -1,4 +1,4 @@
-﻿using Enterprise_Dot_Net_Core_WebApp.Core.Interface;
+﻿using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.FactoryMethod;
 using System.Threading.Tasks;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.FactoryMethod

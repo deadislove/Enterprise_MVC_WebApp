@@ -1,5 +1,6 @@
 ﻿using Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.FactoryMethod;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.FactoryMethod;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.FactoryMethod
 {

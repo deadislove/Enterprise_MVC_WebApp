@@ -14,11 +14,12 @@ using System.IO;
 using Microsoft.Extensions.Logging;
 // Design patterns
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.AbstractFactory;
-using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.AbstractFactory;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Builder;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.FactoryMethod;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Prototype;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Singleton;
+using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Adapter;
+using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Bridge;
 //Object Pooling patterns
 using Microsoft.Extensions.ObjectPool;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -27,8 +28,13 @@ using Enterprise_Dot_Net_Core_WebApp.Middleware;
 // Design patterns
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Singleton;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Adapter;
-using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Adapter;
-using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Bridge;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.AbstractFactory;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Bridge;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Builder;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.FactoryMethod;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Prototype;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Composite;
+using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Composite;
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -93,6 +99,8 @@ namespace Enterprise_Dot_Net_Core_WebApp
             // Bridge
             services.AddScoped(typeof(IBridge), typeof(BridgeRepoA));
             services.AddScoped(typeof(IBridge), typeof(BridgeRepoB));
+            // Composite
+            services.AddScoped(typeof(IComposite<>), typeof(CompositeRepo<>));
 
             // Service type method.
             services.AddTransient<IOperationTransient, Operation>();

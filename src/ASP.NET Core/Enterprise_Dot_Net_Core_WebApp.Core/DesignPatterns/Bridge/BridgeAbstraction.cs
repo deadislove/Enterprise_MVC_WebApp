@@ -1,7 +1,4 @@
-﻿using Enterprise_Dot_Net_Core_WebApp.Core.Interface;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Bridge;
 using System.Threading.Tasks;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Bridge

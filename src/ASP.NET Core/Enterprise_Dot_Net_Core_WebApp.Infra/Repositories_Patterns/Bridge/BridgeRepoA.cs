@@ -1,5 +1,6 @@
 ﻿using Enterprise_Dot_Net_Core_WebApp.Core.Entities;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Bridge;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -7,7 +8,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Bridge
 {
     public class BridgeRepoA : IBridge
     {
-        private IGenericTypeRepository<Enterprise_MVC_Core> repo;
+        private readonly IGenericTypeRepository<Enterprise_MVC_Core> repo;
         private IList<Enterprise_MVC_Core_Variant> variant;
 
         public BridgeRepoA(IGenericTypeRepository<Enterprise_MVC_Core> _repo)

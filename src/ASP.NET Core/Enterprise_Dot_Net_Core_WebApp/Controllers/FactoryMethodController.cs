@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Enterprise_Dot_Net_Core_WebApp.Core.Entities;
-using Enterprise_Dot_Net_Core_WebApp.Core.Interface;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.FactoryMethod;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.FactoryMethod;
 using Microsoft.AspNetCore.Mvc;
 

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Enterprise_Dot_Net_Core_WebApp.Core.Interface
+namespace Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Builder
 {
     public interface IBuilder<T> where T : class
     {

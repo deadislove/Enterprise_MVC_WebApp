@@ -1,6 +1,5 @@
-﻿using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.AbstractFactory;
-
-namespace Enterprise_Dot_Net_Core_WebApp.Core.Interface
+﻿
+namespace Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.AbstractFactory
 {
     public interface IAbstractFactory<T> where T : class
     {

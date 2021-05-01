@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Builder;
 using Enterprise_Dot_Net_Core_WebApp.Core.Entities;
-using Enterprise_Dot_Net_Core_WebApp.Core.Interface;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Builder;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Controllers

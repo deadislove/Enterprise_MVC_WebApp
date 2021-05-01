@@ -1,5 +1,4 @@
-﻿using Enterprise_Dot_Net_Core_WebApp.Core.Interface;
-using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.AbstractFactory;
+﻿using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.AbstractFactory;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.AbstractFactory
 {
