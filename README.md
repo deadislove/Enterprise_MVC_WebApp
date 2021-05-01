@@ -59,6 +59,8 @@ This repository provide the enterprise architecture level sample projects. The g
 [Creational Patterns – Singleton](https://davidskyspace.com/creational-patterns-singleton/)
 \
 [Structural Patterns – Adapter](https://davidskyspace.com/structural-patterns-adapter/)
+\
+[Structural Patterns - Composite](https://davidskyspace.com/structural-patterns-composite/)
 
 ### OTHER PART:
 [CRUD – Transaction Behavior in Entity Framework Core](https://davidskyspace.com/crud-transaction-behavior-in-entity-framework-core/)
