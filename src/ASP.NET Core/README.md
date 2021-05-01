@@ -41,11 +41,14 @@ It is based on the ASP.NET Core framework v2.8.
 [Creational Patterns – Singleton](https://davidskyspace.com/creational-patterns-singleton/)
 \
 [Structural Patterns – Adapter](https://davidskyspace.com/structural-patterns-adapter/)
+\
+[Structural Patterns - Composite](https://davidskyspace.com/structural-patterns-composite/)
 
 ## Release Notification
-- 04/09/2021 Structural Patterns – Adapter
+- 04/29/2021 Structural Patterns - Composite
 
 ## History
+- 04/29/2021 Structural Patterns - Composite
 - 04/09/2021 Structural Patterns – Adapter
 - 03/25/2021 Creational Patterns – Singleton
 - 03/18/2021 Creational Patterns - Prototype
