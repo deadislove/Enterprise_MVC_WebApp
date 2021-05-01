@@ -7,7 +7,7 @@
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_MVC_OlderPost)
 ### .NET Core
 + News
-  - [Structural Patterns – Adapter](https://davidskyspace.com/structural-patterns-adapter/)
+  - [Structural Patterns - Composite](https://davidskyspace.com/structural-patterns-composite/)
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_Core_OlderPost)
 ### Other
 + News
