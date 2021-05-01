@@ -42,6 +42,8 @@ It is based on the ASP.NET Core framework v2.8.
 \
 [Structural Patterns – Adapter](https://davidskyspace.com/structural-patterns-adapter/)
 \
+[Structural Patterns – Bridge](https://davidskyspace.com/structural-patterns-bridge/)
+\
 [Structural Patterns - Composite](https://davidskyspace.com/structural-patterns-composite/)
 
 ## Release Notification
@@ -49,6 +51,7 @@ It is based on the ASP.NET Core framework v2.8.
 
 ## History
 - 04/29/2021 Structural Patterns - Composite
+- 04/15/2021 Structural Patterns – Bridge
 - 04/09/2021 Structural Patterns – Adapter
 - 03/25/2021 Creational Patterns – Singleton
 - 03/18/2021 Creational Patterns - Prototype
