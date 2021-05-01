@@ -60,6 +60,8 @@ This repository provide the enterprise architecture level sample projects. The g
 \
 [Structural Patterns – Adapter](https://davidskyspace.com/structural-patterns-adapter/)
 \
+[Structural Patterns – Bridge](https://davidskyspace.com/structural-patterns-bridge/)
+\
 [Structural Patterns - Composite](https://davidskyspace.com/structural-patterns-composite/)
 
 ### OTHER PART:
