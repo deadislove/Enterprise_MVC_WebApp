@@ -80,3 +80,6 @@ This repository provide the enterprise architecture level sample projects. The g
    - Enterprise_Dot_Net_Core_WebApp web project
    - Enterprise_Dot_Net_Core_WebApp.Core core project
    - Enterprise_Dot_Net_Core_WebApp.Infra infra project.
+
+## Microsoft Doc reference
+- [Common web application architectures](https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures)
