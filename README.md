@@ -63,6 +63,8 @@ This repository provide the enterprise architecture level sample projects. The g
 [Structural Patterns – Bridge](https://davidskyspace.com/structural-patterns-bridge/)
 \
 [Structural Patterns - Composite](https://davidskyspace.com/structural-patterns-composite/)
+\
+[Structural Patterns - Decorator](https://davidskyspace.com/structural-patterns-decorator/)
 
 ### OTHER PART:
 [CRUD – Transaction Behavior in Entity Framework Core](https://davidskyspace.com/crud-transaction-behavior-in-entity-framework-core/)
