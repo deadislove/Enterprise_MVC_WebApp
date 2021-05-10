@@ -1,10 +1,10 @@
 ﻿using Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.FactoryMethod;
-using Enterprise_Dot_Net_Core_WebApp.Core.Interface;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.FactoryMethod;
+using System;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.FactoryMethod
 {
-    public class ConcreteB<T> : Creator<T> where T : class
+    public class ConcreteB<T> : Creator<T>, IDisposable where T : class
     {
         private readonly IFactoryMethod<T> repo;
 
@@ -15,13 +15,25 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.FactoryMeth
 
         public override IFactoryMethod<T> Repo()
         {
-            if (repo == null)
+            try
+            {
+                if (repo == null)
+                    return new FactoryMethodRepoB<T>();
+                else
+                    return this.repo;
+            }
+            catch (Exception ex)
+            {
                 return new FactoryMethodRepoB<T>();
-            else
-                return this.repo;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         public string From_Info() => "From ConcreteB class.";
-        
+
+        public void Dispose() => GC.SuppressFinalize(this);
     }
 }

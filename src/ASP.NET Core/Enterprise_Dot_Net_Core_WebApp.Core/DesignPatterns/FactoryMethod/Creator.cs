@@ -1,9 +1,10 @@
 ﻿using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.FactoryMethod;
+using System;
 using System.Threading.Tasks;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.FactoryMethod
 {
-    public abstract class Creator<T> where T : class
+    public abstract class Creator<T> : IDisposable where T : class
     {
         public abstract IFactoryMethod<T> Repo();
 
@@ -12,6 +13,8 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.FactoryMethod
             var obj = Repo();
             return Task.Run(() => obj.GetById(id).Result as T);
         }
+
+        public void Dispose() => GC.SuppressFinalize(this);
     }
 
     //class Client

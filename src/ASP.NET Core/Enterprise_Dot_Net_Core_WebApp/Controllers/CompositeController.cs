@@ -22,9 +22,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Controllers
         {
             int[] arrObjOrder = new int[] { 1, 3, 2 };
             Tuple<IEnumerable<Enterprise_MVC_Core>, IEnumerable<Enterprise_MVC_Core>> tuple;
-            //var obj1 = this.compositeElement.Operation(1);
-            //Composite.Add(obj1 as object);
-            //var Result = Composite.Operation(0);
+
             List<Enterprise_MVC_Core> list = new List<Enterprise_MVC_Core>();
             List<Enterprise_MVC_Core> list2 = new List<Enterprise_MVC_Core>();
 
@@ -33,8 +31,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Controllers
                 var obj1 = this.compositeElement.Operation(item);
                 Composite.Add(obj1 as object);
             }
-            //Return type = List<List<Enterprise_MVC_COre>> (List<object> where object is List<T>.)
-            //var tmp = Composite.Operation(0) as List<object>;
+
             foreach (var item in Composite.Operation(0) as List<object>)
             {
                 list.Add(item as Enterprise_MVC_Core);

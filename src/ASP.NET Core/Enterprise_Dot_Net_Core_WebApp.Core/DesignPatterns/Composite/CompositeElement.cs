@@ -1,11 +1,9 @@
 ﻿using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Composite;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Composite
 {
-    public class CompositeElement<T> : Composite where T : class
+    public class CompositeElement<T> : Composite, IDisposable where T : class
     {
         private readonly IComposite<T> repo;
 
@@ -18,6 +16,8 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Composite
             return this.repo.GetById(id).Result;
         }
 
-        public override bool IsComposite() => false;        
+        public override bool IsComposite() => false;
+
+        public new void Dispose() => GC.SuppressFinalize(this);
     }
 }

@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Composite
 {
-    public class Composite : Component
+    public class Composite : Component, IDisposable
     {
 
         protected List<object> children = new List<object>();
@@ -28,5 +29,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Composite
 
             return Result;
         }
+
+        public void Dispose() => GC.SuppressFinalize(this);
     }
 }

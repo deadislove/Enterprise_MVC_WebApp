@@ -15,21 +15,62 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Builder
 
         public IEnumerable<T> DefaultResult()
         {
-            return builder.GetAll().Result;
+            try
+            {
+                return builder.GetAll().Result;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
+        /// <summary>
+        /// Combine
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<T> Combine()
         {
-            List<T> sourceList = new List<T> { builder.GetById(1).Result as T };
-            List<T> targetList = new List<T> { builder.GetById(2).Result as T };
-            return builder.Complate(sourceList, targetList).Result;
+            try
+            {
+                List<T> sourceList = new List<T> { builder.GetById(1).Result as T };
+                List<T> targetList = new List<T> { builder.GetById(2).Result as T };
+                return builder.Complate(sourceList, targetList).Result;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
+        /// <summary>
+        /// Anti Combine
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<T> AntiCombine()
         {
-            List<T> sourceList = new List<T> { builder.GetById(2).Result as T };
-            List<T> targetList = new List<T> { builder.GetById(1).Result as T };
-            return builder.Complate(sourceList, targetList).Result;
+            try
+            {
+                List<T> sourceList = new List<T> { builder.GetById(2).Result as T };
+                List<T> targetList = new List<T> { builder.GetById(1).Result as T };
+                return builder.Complate(sourceList, targetList).Result;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         public void Dispose()

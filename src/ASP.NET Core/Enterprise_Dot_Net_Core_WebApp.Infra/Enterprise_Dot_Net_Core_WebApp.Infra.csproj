@@ -19,4 +19,8 @@
     <ProjectReference Include="..\Enterprise_Dot_Net_Core_WebApp.Core\Enterprise_Dot_Net_Core_WebApp.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="InfraSpecificServices\" />
+  </ItemGroup>
+
 </Project>

@@ -1,8 +1,24 @@
-﻿@{
+﻿@model IEnumerable<Enterprise_Dot_Net_Core_WebApp.Controllers.HomeController.RouteClass>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@*
+    dynamic gird layout
+    Reference link: https://vuejsexamples.com/a-lightweight-javascript-library-for-dynamic-grid-layouts/
+*@
+<h4>Controller route url</h4>
+@*  *@
+<div id="container">
+    @foreach (var item in Model)
+    {
+        <div>
+            <a asp-controller="@item.Controller" asp-action="Index">@Html.DisplayFor(Item => item.Controller)</a>
+        </div>
+    }
 </div>

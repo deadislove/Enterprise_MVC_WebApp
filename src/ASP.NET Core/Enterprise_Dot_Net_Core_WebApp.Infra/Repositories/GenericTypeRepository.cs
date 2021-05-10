@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories
 {
-    public class GenericTypeRepository<T> : IGenericTypeRepository<T> where T:class
+    public class GenericTypeRepository<T> : IGenericTypeRepository<T>, IDisposable where T:class
     {
         private readonly DemoDbContext dbContext;
 
@@ -30,7 +30,18 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories
         /// <returns></returns>
         public Task<IEnumerable<T>> GetAll()
         {
-            return Task.Run(() => dbContext.Set<T>().ToList() as IEnumerable<T>);
+            try
+            {
+                return Task.Run(() => dbContext.Set<T>().ToList() as IEnumerable<T>);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         /// <summary>
@@ -39,7 +50,18 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories
         /// <returns></returns>
         public async Task<IEnumerable<T>> AsyncGetAll()
         {
-            return await Task.Run(() => dbContext.Set<T>().ToList() as IEnumerable<T>);
+            try
+            {
+                return await Task.Run(() => dbContext.Set<T>().ToList() as IEnumerable<T>);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         /// <summary>
@@ -49,7 +71,18 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories
         /// <returns>T</returns>
         public Task<T> Find(Expression<Func<T, bool>> predicate)
         {
-            return Task.Run(() => dbContext.Set<T>().Where(predicate).FirstOrDefault());
+            try
+            {
+                return Task.Run(() => dbContext.Set<T>().Where(predicate).FirstOrDefault());
+            }
+            catch(Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         /// <summary>
@@ -59,7 +92,18 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories
         /// <returns>T</returns>
         public async Task<T> AsyncFind(Expression<Func<T, bool>> predicate)
         {
-            return await Task.Run(() => dbContext.Set<T>().Where(predicate).FirstOrDefault());
+            try
+            {
+                return await Task.Run(() => dbContext.Set<T>().Where(predicate).FirstOrDefault());
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         /// <summary>
@@ -69,12 +113,23 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories
         /// <returns> T </returns>
         public Task<T> GetById(int id)
         {
-            if (id != 0)
+            try
             {
-                return Task.Run(() => dbContext.Set<T>().Find(id) as T);
+                if (id != 0)
+                {
+                    return Task.Run(() => dbContext.Set<T>().Find(id) as T);
+                }
+                else
+                    throw new NotImplementedException();
             }
-            else
-                throw new NotImplementedException();
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         /// <summary>
@@ -84,10 +139,21 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories
         /// <returns> T </returns>
         public async Task<T> AsyncGetById(int id)
         {
-            if (id != 0)
-                return await Task.Run(() => dbContext.Set<T>().Find(id) as T);
-            else
-                throw new NotImplementedException();
+            try
+            {
+                if (id != 0)
+                    return await Task.Run(() => dbContext.Set<T>().Find(id) as T);
+                else
+                    throw new NotImplementedException();
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         /// <summary>
@@ -97,8 +163,19 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories
         /// <returns></returns>
         public Task Create(T entity)
         {
-            dbContext.Set<T>().Add(entity);
-            return Task.Run(() => dbContext.SaveChanges());
+            try
+            {
+                dbContext.Set<T>().Add(entity);
+                return Task.Run(() => dbContext.SaveChanges());
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         /// <summary>
@@ -122,6 +199,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories
             {
                 await dbContext.SaveChangesAsync();
                 source.Dispose();
+                Dispose();
             }
         }
 
@@ -132,10 +210,21 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories
         /// <returns></returns>
         public Task Update(T entity)
         {
-            dbContext.Entry<T>(entity).State = EntityState.Modified;
-            //dbContext.SaveChanges();
-            SaveChange();
-            return null;
+            try
+            {
+                dbContext.Entry<T>(entity).State = EntityState.Modified;
+                //dbContext.SaveChanges();
+                SaveChange();
+                return null;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         /// <summary>
@@ -145,9 +234,20 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories
         /// <returns></returns>
         public Task AsyncUpdate(T entity)
         {
-            dbContext.Entry(entity).State = EntityState.Modified;
-            dbContext.SaveChangesAsync();
-            return null;
+            try
+            {
+                dbContext.Entry(entity).State = EntityState.Modified;
+                dbContext.SaveChangesAsync();
+                return null;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         /// <summary>
@@ -157,8 +257,19 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories
         /// <returns></returns>
         public Task Delete(T entity)
         {
-            dbContext.Entry<T>(entity).State = EntityState.Deleted;
-            return Task.Run(() => dbContext.SaveChanges());
+            try
+            {
+                dbContext.Entry<T>(entity).State = EntityState.Deleted;
+                return Task.Run(() => dbContext.SaveChanges());
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         /// <summary>
@@ -168,8 +279,18 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories
         /// <returns></returns>
         public async Task AsyncDelete(T entity)
         {
-            dbContext.Entry<T>(entity).State = EntityState.Deleted;
-            await Task.Run(() => dbContext.SaveChangesAsync());
+            try
+            {
+                dbContext.Entry<T>(entity).State = EntityState.Deleted;
+                await Task.Run(() => dbContext.SaveChangesAsync());
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         /// <summary>
@@ -179,7 +300,18 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories
         /// <returns>int32</returns>
         public Task<int> RowCount(Func<T, bool> predicate)
         {
-            return Task.Run(() => dbContext.Set<T>().Where(predicate).Count());
+            try
+            {
+                return Task.Run(() => dbContext.Set<T>().Where(predicate).Count());
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         /// <summary>
@@ -189,7 +321,18 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories
         /// <returns>int32</returns>
         public async Task<int> AsyncRowCount(Func<T, bool> predicate)
         {
-            return await Task.Run(() => dbContext.Set<T>().Where(predicate).Count());
+            try
+            {
+                return await Task.Run(() => dbContext.Set<T>().Where(predicate).Count());
+            }
+            catch (Exception ex)
+            {
+                return await Task.FromResult((dynamic)null);
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         /// <summary>
@@ -198,8 +341,19 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories
         /// <returns></returns>
         public Task SaveChange()
         {
-            dbContext.SaveChanges();
-            return null;
+            try
+            {
+                dbContext.SaveChanges();
+                return Task.CompletedTask;
+            }
+            catch (Exception ex)
+            {
+                return Task.CompletedTask;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         /// <summary>
@@ -208,8 +362,24 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories
         /// <returns></returns>
         public Task SaveChangeAsync()
         {
-            dbContext.SaveChangesAsync();
-            return null;
+            try
+            {
+                dbContext.SaveChangesAsync();
+                return Task.CompletedTask;
+            }
+            catch (Exception ex)
+            {
+                return Task.CompletedTask;
+            }
+            finally
+            {
+                Dispose();
+            }
+        }
+
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
         }
     }
 }

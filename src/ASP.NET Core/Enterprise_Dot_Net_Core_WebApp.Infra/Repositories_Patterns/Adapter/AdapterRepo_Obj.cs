@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Adapter
 {
-    public class AdapterRepo_Obj<T> : IAdapter_Obj<T> where T : class
+    public class AdapterRepo_Obj<T> : IAdapter_Obj<T>, IDisposable where T : class
     {
         private readonly Adaptee_Obj<T> adaptee;
         private readonly IGenericTypeRepository<T> repo;
@@ -31,6 +31,12 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Adapter
             {
                 return new List<T>();
             }
+            finally
+            {
+                Dispose();
+            }
         }
+
+        public void Dispose() => GC.SuppressFinalize(this);
     }
 }

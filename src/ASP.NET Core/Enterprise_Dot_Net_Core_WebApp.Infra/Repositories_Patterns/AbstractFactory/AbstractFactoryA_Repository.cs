@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.AbstractFactory
 {
-    public class AbstractFactoryA_Repository<T> : IAbstractFactoryA<T> where T : class
+    public class AbstractFactoryA_Repository<T> : IAbstractFactoryA<T>, IDisposable where T : class
     {
         private readonly DemoDbContext dbContext;
 
@@ -28,13 +28,24 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.AbstractFac
         /// <returns></returns>
         public Task<bool> Get()
         {
-            if (dbContext != null)
+            try
             {
-                var o = dbContext.Set<T>().ToList();
-                return Task.FromResult(true);
+                if (dbContext != null)
+                {
+                    var o = dbContext.Set<T>().ToList();
+                    return Task.FromResult(true);
+                }
+                else
+                    return Task.FromResult(false);
             }
-            else
+            catch (Exception ex)
+            {
                 return Task.FromResult(false);
+            }
+            finally
+            {
+                Dispose();
+            }
         }
         #endregion
 
@@ -56,6 +67,10 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.AbstractFac
                 Debug.WriteLine("Message: {0}", e.Message);
                 return null;
             }
+            finally
+            {
+                Dispose();
+            }
         }
         #endregion
 
@@ -67,7 +82,8 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.AbstractFac
         /// <returns>T</returns>
         public Task<T> GetByID(int? id)
         {
-            try {
+            try
+            {
                 var obj = dbContext.Set<T>().Find(id.Value) as T;
                 return Task.FromResult(obj);
             }
@@ -76,6 +92,10 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.AbstractFac
                 Debug.WriteLine("Commit Exception Type: {0}", e.GetType());
                 Debug.WriteLine("Message: {0}", e.Message);
                 return null;
+            }
+            finally
+            {
+                Dispose();
             }
         }
         #endregion
@@ -100,6 +120,10 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.AbstractFac
                 Debug.WriteLine("Message: {0}", e.Message);
                 return Task.FromResult(false);
             }
+            finally
+            {
+                Dispose();
+            }
         }
         #endregion
 
@@ -122,6 +146,10 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.AbstractFac
                 Debug.WriteLine("Commit Exception Type: {0}", e.GetType());
                 Debug.WriteLine("Message: {0}", e.Message);
                 return Task.FromResult(false);
+            }
+            finally
+            {
+                Dispose();
             }
         }
         #endregion
@@ -146,7 +174,13 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.AbstractFac
                 Debug.WriteLine("Message: {0}", e.Message);
                 return Task.FromResult(false);
             }
+            finally
+            {
+                Dispose();
+            }
         }
         #endregion
+
+        public void Dispose() => GC.SuppressFinalize(this);
     }
 }

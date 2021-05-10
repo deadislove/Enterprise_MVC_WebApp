@@ -1,12 +1,13 @@
 ﻿using Enterprise_Dot_Net_Core_WebApp.Core.Entities;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Bridge;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Bridge
 {
-    public class BridgeRepoB : IBridge
+    public class BridgeRepoB : IBridge, IDisposable
     {
         private readonly IGenericTypeRepository<Enterprise_MVC_Core> repo;
         private IList<Enterprise_MVC_Core_Variant> variant;
@@ -16,26 +17,43 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Bridge
             this.repo = _repo;
         }
 
+        /// <summary>
+        /// Get All object
+        /// </summary>
+        /// <returns></returns>
         public Task<object> GetAll()
         {
-            dynamic temp = this.repo.GetAll().Result;
-
-            if (temp != null || temp != "")
+            try
             {
-                variant = new List<Enterprise_MVC_Core_Variant>();
+                dynamic temp = this.repo.GetAll().Result;
 
-                for (int i = 0; i < temp.Count; i++)
+                if (temp != null || temp != "")
                 {
-                    variant.Add(new Enterprise_MVC_Core_Variant()
+                    variant = new List<Enterprise_MVC_Core_Variant>();
+
+                    for (int i = 0; i < temp.Count; i++)
                     {
-                        ID = temp[i].ID,
-                        Name = temp[i].Name,
-                        Age = temp[i].Age,
-                        Commit = "From Bridge repository B."
-                    });
+                        variant.Add(new Enterprise_MVC_Core_Variant()
+                        {
+                            ID = temp[i].ID,
+                            Name = temp[i].Name,
+                            Age = temp[i].Age,
+                            Commit = "From Bridge repository B."
+                        });
+                    }
                 }
+                return Task.Run(() => variant as object);
             }
-            return Task.Run(() => variant as object);
+            catch (Exception ex)
+            {
+                return Task.FromResult((object)null);
+            }
+            finally
+            {
+                Dispose();
+            }
         }
+
+        public void Dispose() => GC.SuppressFinalize(this);
     }
 }

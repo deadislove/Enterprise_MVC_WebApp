@@ -35,6 +35,7 @@ using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.FactoryMethod
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Prototype;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Composite;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Composite;
+using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns;
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -101,6 +102,8 @@ namespace Enterprise_Dot_Net_Core_WebApp
             services.AddScoped(typeof(IBridge), typeof(BridgeRepoB));
             // Composite
             services.AddScoped(typeof(IComposite<>), typeof(CompositeRepo<>));
+            // Decorator
+            services.AddScoped(typeof(DecoratorServices));
 
             // Service type method.
             services.AddTransient<IOperationTransient, Operation>();
@@ -129,6 +132,9 @@ namespace Enterprise_Dot_Net_Core_WebApp
             //Test using /?Id=123&day=28&month=9
             app.UseMiddleware<ObjectPoolingMiddleware>();
 
+            /* Static files, such as HTML, CSS, images, and JavaScript, are assets an ASP.NET Core app serves directly to clients by default.
+             * Reference link: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-2.2
+             */
             app.UseStaticFiles();
             app.UseCookiePolicy();
 

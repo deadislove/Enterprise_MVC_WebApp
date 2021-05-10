@@ -3,7 +3,7 @@ using System;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Singleton
 {
-    public class Operation : IOperationTransient, IOperationScoped, IOperationSingleton
+    public class Operation : IOperationTransient, IOperationScoped, IOperationSingleton, IDisposable
     {
         public Operation()
         {
@@ -15,26 +15,61 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Singleton
 
         string IOperationTransient.OperationId()
         {
-            if (string.IsNullOrEmpty(OperationId))
+            try
+            {
+                if (string.IsNullOrEmpty(OperationId))
+                    throw new NotImplementedException();
+                else
+                    return OperationId;
+            }
+            catch (Exception ex)
+            {
                 throw new NotImplementedException();
-            else
-                return OperationId;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         string IOperationScoped.OperationId()
         {
-            if (string.IsNullOrEmpty(OperationId))
+            try
+            {
+                if (string.IsNullOrEmpty(OperationId))
+                    throw new NotImplementedException();
+                else
+                    return OperationId;
+            }
+            catch (Exception ex)
+            {
                 throw new NotImplementedException();
-            else
-                return OperationId;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         string IOperationSingleton.OperationId()
         {
-            if (string.IsNullOrEmpty(OperationId))
+            try
+            {
+                if (string.IsNullOrEmpty(OperationId))
+                    throw new NotImplementedException();
+                else
+                    return OperationId;
+            }
+            catch (Exception ex)
+            {
                 throw new NotImplementedException();
-            else
-                return OperationId;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
+
+        public void Dispose() => GC.SuppressFinalize(this);
     }
 }
