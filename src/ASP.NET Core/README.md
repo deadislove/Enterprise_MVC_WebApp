@@ -45,11 +45,14 @@ It is based on the ASP.NET Core framework v2.8.
 [Structural Patterns – Bridge](https://davidskyspace.com/structural-patterns-bridge/)
 \
 [Structural Patterns - Composite](https://davidskyspace.com/structural-patterns-composite/)
+\
+[Structural Patterns - Decorator](https://davidskyspace.com/structural-patterns-decorator/)
 
 ## Release Notification
-- 04/29/2021 Structural Patterns - Composite
+- 05/10/2021 Structural Patterns - Decorator
 
 ## History
+- 05/10/2021 Structural Patterns - Decorator
 - 04/29/2021 Structural Patterns - Composite
 - 04/15/2021 Structural Patterns – Bridge
 - 04/09/2021 Structural Patterns – Adapter
