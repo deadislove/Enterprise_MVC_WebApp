@@ -20,6 +20,8 @@ using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Prototype;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Singleton;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Adapter;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Bridge;
+using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Composite;
+using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Facade;
 //Object Pooling patterns
 using Microsoft.Extensions.ObjectPool;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -34,7 +36,8 @@ using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Builder;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.FactoryMethod;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Prototype;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Composite;
-using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Composite;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Facade;
+//Design patterns - services
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns;
 
 namespace Enterprise_Dot_Net_Core_WebApp
@@ -104,6 +107,11 @@ namespace Enterprise_Dot_Net_Core_WebApp
             services.AddScoped(typeof(IComposite<>), typeof(CompositeRepo<>));
             // Decorator
             services.AddScoped(typeof(DecoratorServices));
+            // Facade
+            services.AddScoped(typeof(IFacade<>), typeof(FacadeRepo<>));
+            services.AddScoped(typeof(FacadeServices));
+
+
 
             // Service type method.
             services.AddTransient<IOperationTransient, Operation>();
