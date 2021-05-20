@@ -7,7 +7,7 @@
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_MVC_OlderPost)
 ### .NET Core
 + News
-  - [Structural Patterns - Decorator](https://davidskyspace.com/structural-patterns-decorator/)
+  - [Structural Patterns - Facade](https://davidskyspace.com/structural-patterns-facade/)
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_Core_OlderPost)
 ### Other
 + News
