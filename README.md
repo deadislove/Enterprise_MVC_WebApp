@@ -89,3 +89,4 @@ This repository provide the enterprise architecture level sample projects. The g
 
 ## Microsoft Doc reference
 - [Common web application architectures](https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures)
+- [Clean Architecture](https://github.com/ardalis/CleanArchitecture)
