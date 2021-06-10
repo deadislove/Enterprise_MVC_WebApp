@@ -67,6 +67,8 @@ This repository provide the enterprise architecture level sample projects. The g
 [Structural Patterns - Decorator](https://davidskyspace.com/structural-patterns-decorator/)
 \
 [Structural Patterns - Facade](https://davidskyspace.com/structural-patterns-facade/)
+\
+[Structural Patterns - Flyweight](https://davidskyspace.com/structural-patterns-flyweight/)
 
 ### OTHER PART:
 [CRUD – Transaction Behavior in Entity Framework Core](https://davidskyspace.com/crud-transaction-behavior-in-entity-framework-core/)
