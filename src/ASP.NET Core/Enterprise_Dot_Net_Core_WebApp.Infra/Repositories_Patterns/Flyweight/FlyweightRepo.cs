@@ -1,31 +1,37 @@
-﻿using Enterprise_Dot_Net_Core_WebApp.Core.Entities;
+﻿using Enterprise_Dot_Net_Core_WebApp.Core.Interface;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Flyweight;
 using System;
 using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Facade
+namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Flyweight
 {
-    public class Facade : IDisposable
+    public class FlyweightRepo<T> : IFlyweight<T>, IDisposable where T : class
     {
-        protected FacadeSubsystem1<Enterprise_MVC_Core> repo1;
-        protected FacadeSubsystem2<Enterprise_MVC_Core> repo2;
+        private IGenericTypeRepository<T> repo;
 
-        public Facade(FacadeSubsystem1<Enterprise_MVC_Core> _repo1, FacadeSubsystem2<Enterprise_MVC_Core> _repo2)
+        public FlyweightRepo(IGenericTypeRepository<T> _repo)
         {
-            this.repo1 = _repo1;
-            this.repo2 = _repo2;
+            this.repo = _repo;
         }
 
-        public List<object> OperationFacade()
+        public async Task<List<T>> GetList()
         {
-            List<object> list = new List<object>
+            try
             {
-                repo1.OperationInitiation().Result,
-                repo1.Operation(null).Result,
-                repo2.OperationInitiation().Result,
-                repo2.Operation(null).Result
-            };
+                dynamic obj = repo.GetAll().Result;
 
-            return list;
+                return obj as List<T>;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         #region IDisposable Support
@@ -38,8 +44,6 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Facade
                 if (disposing)
                 {
                     // TODO: dispose managed state (managed objects).
-                    repo1.Dispose();
-                    repo2.Dispose();
                 }
 
                 // TODO: free unmanaged resources (unmanaged objects) and override a finalizer below.
@@ -50,7 +54,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Facade
         }
 
         // TODO: override a finalizer only if Dispose(bool disposing) above has code to free unmanaged resources.
-        // ~Facade() {
+        // ~FlyweightRepo() {
         //   // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
         //   Dispose(false);
         // }
@@ -61,7 +65,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Facade
             // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
             Dispose(true);
             // TODO: uncomment the following line if the finalizer is overridden above.
-            GC.SuppressFinalize(this);
+            // GC.SuppressFinalize(this);
         }
         #endregion
     }

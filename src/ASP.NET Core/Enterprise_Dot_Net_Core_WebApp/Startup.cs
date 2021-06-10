@@ -22,6 +22,7 @@ using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Adapter;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Bridge;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Composite;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Facade;
+using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Flyweight;
 //Object Pooling patterns
 using Microsoft.Extensions.ObjectPool;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -37,6 +38,7 @@ using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.FactoryMethod
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Prototype;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Composite;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Facade;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Flyweight;
 //Design patterns - services
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns;
 
@@ -110,8 +112,11 @@ namespace Enterprise_Dot_Net_Core_WebApp
             // Facade
             services.AddScoped(typeof(IFacade<>), typeof(FacadeRepo<>));
             services.AddScoped(typeof(FacadeServices));
-
-
+            // Flyweight
+            services.AddScoped(typeof(IFlyweight<>), typeof(FlyweightRepo<>));
+            services.AddScoped(typeof(FlyweightServices));
+            // Private Data Class
+            services.AddScoped(typeof(PrivateDataClassServices));
 
             // Service type method.
             services.AddTransient<IOperationTransient, Operation>();

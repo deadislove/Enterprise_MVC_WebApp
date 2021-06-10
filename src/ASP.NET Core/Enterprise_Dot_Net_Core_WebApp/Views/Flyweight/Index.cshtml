@@ -1,0 +1,82 @@
+﻿@model  IEnumerable<Enterprise_Dot_Net_Core_WebApp.Core.DTOs.DesginPatterns.FlyweightsDto>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Flyweight - Index</h1>
+
+<p>
+    @foreach (var item in Model.Select(t => t.Result).ToArray()[0])
+    {
+        @Html.DisplayFor(modelitem => item)
+    }
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Select(t => t.GetList.FirstOrDefault()).FirstOrDefault().ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Select(t => t.GetList.FirstOrDefault()).FirstOrDefault().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Select(t => t.GetList.FirstOrDefault()).FirstOrDefault().Age)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Select(t => t.GetList).ToArray()[0])
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelitem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.Age)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<hr />
+<p>
+    @foreach (var item in Model.Select(t => t.Result).ToArray()[1])
+    {
+        @Html.DisplayFor(modelitem => item)
+    }
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Select(t => t.GetList.FirstOrDefault()).FirstOrDefault().ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Select(t => t.GetList.FirstOrDefault()).FirstOrDefault().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Select(t => t.GetList.FirstOrDefault()).FirstOrDefault().Age)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Select(t => t.GetList).ToArray()[1])
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelitem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.Age)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
