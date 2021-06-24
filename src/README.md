@@ -7,7 +7,7 @@
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_MVC_OlderPost)
 ### .NET Core
 + News
-  - [Structural Patterns - Flyweight](https://davidskyspace.com/structural-patterns-flyweight/)
+  - [Structural Patterns - Private class data](https://davidskyspace.com/structural-patterns-private-class-data/)
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_Core_OlderPost)
 ### Other
 + News
