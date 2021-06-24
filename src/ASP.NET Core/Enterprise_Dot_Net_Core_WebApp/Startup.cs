@@ -117,6 +117,8 @@ namespace Enterprise_Dot_Net_Core_WebApp
             services.AddScoped(typeof(FlyweightServices));
             // Private Data Class
             services.AddScoped(typeof(PrivateDataClassServices));
+            // Proxy service 
+            //
 
             // Service type method.
             services.AddTransient<IOperationTransient, Operation>();

@@ -6,7 +6,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns
 {
     public class PrivateDataClassServices
     {
-        IGenericTypeRepository<Enterprise_MVC_Core> repo;
+        private IGenericTypeRepository<Enterprise_MVC_Core> repo;
         private PrivateDataClass privateDataClass;
 
         public PrivateDataClassServices(IGenericTypeRepository<Enterprise_MVC_Core> _repo)
