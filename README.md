@@ -44,23 +44,23 @@ This repository provide the enterprise architecture level sample projects. The g
 \
 [Aspect-oriented programming in .NET Core](https://davidskyspace.com/aspect-oriented-programming-in-net-core/)
 \
-[Generic Type in Repository – .NET Core Part](https://davidskyspace.com/generic-type-in-repository-net-core-part/)
+[Generic Type in Repository - .NET Core Part](https://davidskyspace.com/generic-type-in-repository-net-core-part/)
 \
-[Creational Patterns – Abstract Factory](https://davidskyspace.com/creational-patterns-abstract-factory/)
+[Creational Patterns - Abstract Factory](https://davidskyspace.com/creational-patterns-abstract-factory/)
 \
-[Creational Patterns – Builder](https://davidskyspace.com/creational-patterns-builder/)
+[Creational Patterns - Builder](https://davidskyspace.com/creational-patterns-builder/)
 \
-[Creational Patterns – Factory Method](https://davidskyspace.com/creational-patterns-factory-method/)
+[Creational Patterns - Factory Method](https://davidskyspace.com/creational-patterns-factory-method/)
 \
-[Creational Patterns – Object Pool](davidskyspace.com/creational-patterns-object-pool/)
+[Creational Patterns - Object Pool](davidskyspace.com/creational-patterns-object-pool/)
 \
-[Creational Patterns – Prototype](https://davidskyspace.com/creational-patterns-prototype/)
+[Creational Patterns - Prototype](https://davidskyspace.com/creational-patterns-prototype/)
 \
-[Creational Patterns – Singleton](https://davidskyspace.com/creational-patterns-singleton/)
+[Creational Patterns - Singleton](https://davidskyspace.com/creational-patterns-singleton/)
 \
-[Structural Patterns – Adapter](https://davidskyspace.com/structural-patterns-adapter/)
+[Structural Patterns - Adapter](https://davidskyspace.com/structural-patterns-adapter/)
 \
-[Structural Patterns – Bridge](https://davidskyspace.com/structural-patterns-bridge/)
+[Structural Patterns - Bridge](https://davidskyspace.com/structural-patterns-bridge/)
 \
 [Structural Patterns - Composite](https://davidskyspace.com/structural-patterns-composite/)
 \
