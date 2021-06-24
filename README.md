@@ -71,6 +71,8 @@ This repository provide the enterprise architecture level sample projects. The g
 [Structural Patterns - Flyweight](https://davidskyspace.com/structural-patterns-flyweight/)
 \
 [Structural Patterns - Private class data](https://davidskyspace.com/structural-patterns-private-class-data/)
+\
+[Structural Patterns - Proxy](https://davidskyspace.com/structural-patterns-proxy/)
 
 ### OTHER PART:
 [CRUD – Transaction Behavior in Entity Framework Core](https://davidskyspace.com/crud-transaction-behavior-in-entity-framework-core/)
