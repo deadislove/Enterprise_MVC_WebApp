@@ -53,11 +53,14 @@ It is based on the ASP.NET Core framework v2.8.
 [Structural Patterns - Flyweight](https://davidskyspace.com/structural-patterns-flyweight/)
 \
 [Structural Patterns - Private class data](https://davidskyspace.com/structural-patterns-private-class-data/)
+\
+[Structural Patterns - Proxy](https://davidskyspace.com/structural-patterns-proxy/)
 
 ## Release Notification
-- 06/17/2021 Structural Patterns - Private class data
+- 06/24/2021 Structural Patterns - Proxy
 
 ## History
+- 06/24/2021 Structural Patterns - Proxy
 - 06/17/2021 Structural Patterns - Private class data
 - 06/10/2021 Structural Patterns - Flyweight
 - 05/20/2021 Structural Patterns - Facade
