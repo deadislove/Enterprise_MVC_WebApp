@@ -1,0 +1,48 @@
+﻿@model Tuple<
+        IEnumerable<Enterprise_Dot_Net_Core_WebApp.Core.Entities.Enterprise_MVC_Core>,
+        IEnumerable<Enterprise_Dot_Net_Core_WebApp.Core.DTOs.Messages>
+    >
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Filter - Index</h1>
+<br />
+<p>
+    @foreach (var item in Model.Item2)
+    {
+        @Html.DisplayFor(MsgItem => item.Message)
+    }
+</p>
+<b>Result</b>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.FirstOrDefault().ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.FirstOrDefault().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.FirstOrDefault().Age)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Item1)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(itemModel => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(itemModel => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(itemModel => item.Age)
+                </td>
+            </tr>
+        }
+    </tbody>foreach
+</table>

@@ -1,9 +1,7 @@
 ﻿using Enterprise_Dot_Net_Core_WebApp.Core.DTOs;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Proxy;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Proxy
 {
