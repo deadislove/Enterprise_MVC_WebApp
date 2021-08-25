@@ -1,0 +1,101 @@
+﻿@model Tuple<
+                IEnumerable<Enterprise_Dot_Net_Core_WebApp.Core.Entities.Enterprise_MVC_Core>,
+                IEnumerable<Enterprise_Dot_Net_Core_WebApp.Core.Entities.Enterprise_MVC_Core>,
+                IEnumerable<Enterprise_Dot_Net_Core_WebApp.Core.Entities.Enterprise_MVC_Core>
+                    >
+@{
+    ViewData["Title"] = "index";
+}
+
+<h1>Chain of Repository - Index</h1>
+
+<h3>Table sequence asc</h3>
+<table class="table">
+    <thead>
+        <tr>
+            @for (int i = 0; i < Model.Item1.GetType().GetProperties().Length; i++)
+            {
+                <th>
+                    @Model.Item1.GetType().GetProperties()[i].Name
+                </th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Item1)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Table sequence desc</h3>
+<table class="table">
+    <thead>
+        <tr>
+            @for (int i = 0; i < Model.Item2.GetType().GetProperties().Length; i++)
+            {
+                <th>
+                    @Model.Item2.GetType().GetProperties()[i].Name
+                </th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Item2)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Table sequence -> 1, 3, 2</h3>
+<table class="table">
+    <thead>
+        <tr>
+            @for (int i = 0; i < Model.Item3.GetType().GetProperties().Length; i++)
+            {
+                <th>
+                    @Model.Item3.GetType().GetProperties()[i].Name
+                </th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Item3)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

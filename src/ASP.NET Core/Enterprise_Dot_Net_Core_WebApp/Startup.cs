@@ -41,6 +41,8 @@ using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Facade;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Flyweight;
 //Design patterns - services
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.ChainOfResponsibility;
+using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.ChainOfResponsibility;
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -119,6 +121,8 @@ namespace Enterprise_Dot_Net_Core_WebApp
             services.AddScoped(typeof(PrivateDataClassServices));
             // Proxy service 
             //
+            // CofR service
+            services.AddScoped(typeof(ICofR), typeof(HandlerService));
 
             // Service type method.
             services.AddTransient<IOperationTransient, Operation>();

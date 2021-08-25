@@ -7,10 +7,10 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns
 {
     public class FilterServices<T> where T :class
     {
-        IGenericTypeRepository<T> Repo;
-        NameCriteria<T> _nameCriteria;
-        AgeCriteria<T> _ageCriteria;
-        List<Messages> RecordMsg;
+        private IGenericTypeRepository<T> Repo;
+        private NameCriteria<T> _nameCriteria;
+        private AgeCriteria<T> _ageCriteria;
+        private List<Messages> RecordMsg;
 
         public FilterServices(IGenericTypeRepository<T> _repo)
         {

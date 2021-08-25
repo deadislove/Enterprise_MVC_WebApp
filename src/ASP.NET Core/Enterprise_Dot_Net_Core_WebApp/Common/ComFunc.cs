@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Enterprise_Dot_Net_Core_WebApp.Core.Entities;
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Common
 {
@@ -50,6 +52,75 @@ namespace Enterprise_Dot_Net_Core_WebApp.Common
             }
 
             return stringBuilder.ToString();
+        }
+        #endregion
+
+        #region Common checking object function for Enterprise_MVC_Core class object
+        public void CheckObject(Enterprise_MVC_Core obj)
+        {
+            PropertyInfo[] propertyInfos;
+            propertyInfos = typeof(Enterprise_MVC_Core).GetProperties();
+
+            foreach (PropertyInfo propertyInfo in propertyInfos)
+            {
+                //propertyInfo.Name;
+                //propertyInfo.GetValue(obj).ToString();
+            }
+        }
+        #endregion
+
+        #region Convert List to DataTable
+        /// <summary>
+        /// Convert List to DataTable
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="collection"></param>
+        /// <returns></returns>
+        public static DataTable ToDataTable<T>(IEnumerable<T> collection)
+        {
+            var props = typeof(T).GetProperties();
+            var dt = new DataTable();
+            dt.Columns.AddRange(props.Select(p => new DataColumn(p.Name, p.PropertyType)).ToArray());
+
+            if (collection.Count() > 0)
+            {
+                for (int i = 0; i < collection.Count(); i++)
+                {
+                    ArrayList tempList = new ArrayList();
+                    foreach (PropertyInfo pi in props)
+                    {
+                        object obj = pi.GetValue(collection.ElementAt(i), null);
+                        tempList.Add(obj);
+                    }
+                    object[] array = tempList.ToArray();
+                    dt.LoadDataRow(array, true);
+                }
+            }
+            return dt;
+        }
+        #endregion
+
+        #region Convert List<object> to List<KeyValuePair<string, object>>
+        /// <summary>
+        /// Convert List<object> to List<KeyValuePair<string, object>>
+        /// </summary>
+        /// <param name="source">List<object></param>
+        /// <param name="returnObj"></param>
+        public void ToDicList(List<object> source, out List<KeyValuePair<string, object>> returnObj)
+        {
+            try
+            {
+                returnObj = source.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public)
+                    .ToDictionary(prop => prop.Name, prop => prop.GetValue(source, null)).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Dispose();
+            }
         }
         #endregion
 
