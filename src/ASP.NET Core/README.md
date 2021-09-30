@@ -59,11 +59,14 @@ It is based on the ASP.NET Core framework v2.8.
 [Structural Patterns - Filter/Criteria](https://davidskyspace.com/structural-patterns-filter-criteria/)
 \
 [Behavioral Patterns - Chain of Responsibility](https://davidskyspace.com/behavioral-patterns-chain-of-responsibility/)
+\
+[Behavioral Patterns - Command](https://davidskyspace.com/behavioral-patterns-command/)
 
 ## Release Notification
-- 08/25/2021 Behavioral Patterns - Chain of Responsibility
+- 09/30/2021 Behavioral Patterns - Command
 
 ## History
+- 09/30/2021 Behavioral Patterns - Command
 - 08/25/2021 Behavioral Patterns - Chain of Responsibility
 - 07/01/2021 Structural Patterns - Filter/Criteria
 - 06/24/2021 Structural Patterns - Proxy
