@@ -1,5 +1,5 @@
 # News
-**<div align="right">Date: Aug, 2021</div>**
+**<div align="right">Date: Sep, 2021</div>**
 
 ### .NET MVC
 + News
@@ -7,7 +7,7 @@
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_MVC_OlderPost)
 ### .NET Core
 + News
-  - [Behavioral Patterns - Chain of Responsibility](https://davidskyspace.com/behavioral-patterns-chain-of-responsibility/)
+  - [Behavioral Patterns - Command](https://davidskyspace.com/behavioral-patterns-command/)
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_Core_OlderPost)
 ### Other
 + News
