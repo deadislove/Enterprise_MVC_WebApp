@@ -43,6 +43,8 @@ using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Flyweight;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.ChainOfResponsibility;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.ChainOfResponsibility;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Command;
+using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Command;
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -123,6 +125,9 @@ namespace Enterprise_Dot_Net_Core_WebApp
             //
             // CofR service
             services.AddScoped(typeof(ICofR), typeof(HandlerService));
+            // Command
+            services.AddScoped(typeof(ICommand<,>), typeof(CommandServices<,>));
+            services.AddScoped(typeof(ICommandExe), typeof(CommandExeServices));
 
             // Service type method.
             services.AddTransient<IOperationTransient, Operation>();

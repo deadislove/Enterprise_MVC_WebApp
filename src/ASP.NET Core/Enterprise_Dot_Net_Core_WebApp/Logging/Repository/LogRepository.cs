@@ -9,6 +9,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Logging.Repository
     public class LogRepository : ActionFilterAttribute, ILogRepository
     {
         private readonly ILogger _logger;
+        private string _routeRequestInfo;
 
         public LogRepository(ILoggerFactory loggerFactory)
         {
@@ -20,6 +21,10 @@ namespace Enterprise_Dot_Net_Core_WebApp.Logging.Repository
 
             if (context.ActionArguments.Count != 0)
                 _logger.LogInformation("Parameter: " + JsonConvert.SerializeObject(context.ActionArguments.Values));
+
+            //Record route info
+            _routeRequestInfo = string.Format("Controller: {0}; Action: {1}", context.RouteData.Values["controller"], context.RouteData.Values["action"]);
+            _logger.LogInformation(_routeRequestInfo);
 
             if (context.Result != null)
             {
