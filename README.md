@@ -88,14 +88,12 @@ This repository provide the enterprise architecture level sample projects. The g
 
 ## Project Explorer
 ### ASP.NET MVC PART
-[![.NET](https://github.com/deadislove/Enterprise_MVC_WebApplication/actions/workflows/dotnet.yml/badge.svg)](https://github.com/deadislove/Enterprise_MVC_WebApplication/actions/workflows/dotnet.yml)
  - Enterprise_MVC_Web_App
    - Enterprise_MVC_Web_App web project.
    - Enterprise_MVC_Web_App core project.
    - Enterprise_MVC_Web_App infra project.
    - Enterprise_MVC_Web_App test project.
  ### ASP.NET Core PART 
- [![.NET](https://github.com/deadislove/Enterprise_Dot_Net_Core_WebApp/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/deadislove/Enterprise_Dot_Net_Core_WebApp/actions/workflows/dotnet.yml)
  - Enterprise_Dot_Net_Core_WebApp
    - Enterprise_Dot_Net_Core_WebApp web project
    - Enterprise_Dot_Net_Core_WebApp.Core core project
