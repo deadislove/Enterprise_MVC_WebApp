@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using Enterprise_Dot_Net_Core_WebApp.Core.Entities;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.FactoryMethod;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.FactoryMethod;
+using Enterprise_Dot_Net_Core_WebApp.Logging.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Controllers
 {
+    [ServiceFilter(typeof(ILogRepository))]
     public class FactoryMethodController : Controller
     {
         private ConcreteA<Enterprise_MVC_Core> concreteA;

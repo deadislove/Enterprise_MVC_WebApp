@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Enterprise_Dot_Net_Core_WebApp.Core.DTOs;
 using Enterprise_Dot_Net_Core_WebApp.Core.Entities;
-using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Command;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.Command;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Command;
 using Enterprise_Dot_Net_Core_WebApp.Logging.Interface;
 using Microsoft.AspNetCore.Mvc;

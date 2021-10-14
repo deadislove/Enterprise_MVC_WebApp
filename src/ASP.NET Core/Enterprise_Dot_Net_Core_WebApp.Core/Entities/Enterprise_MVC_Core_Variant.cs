@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Enterprise_Dot_Net_Core_WebApp.Core.Entities
+﻿namespace Enterprise_Dot_Net_Core_WebApp.Core.Entities
 {
     public class Enterprise_MVC_Core_Variant
     {

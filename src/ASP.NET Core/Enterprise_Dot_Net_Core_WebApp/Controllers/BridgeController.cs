@@ -4,10 +4,12 @@ using Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Bridge;
 using Enterprise_Dot_Net_Core_WebApp.Core.Entities;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface;
 using Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Bridge;
+using Enterprise_Dot_Net_Core_WebApp.Logging.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Controllers
 {
+    [ServiceFilter(typeof(ILogRepository))]
     public class BridgeController : Controller
     {
         private readonly IGenericTypeRepository<Enterprise_MVC_Core> GenericRepo;

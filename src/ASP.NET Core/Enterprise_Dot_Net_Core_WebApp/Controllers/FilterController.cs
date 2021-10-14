@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Enterprise_Dot_Net_Core_WebApp.Core.DTOs;
 using Enterprise_Dot_Net_Core_WebApp.Core.Entities;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns;
+using Enterprise_Dot_Net_Core_WebApp.Logging.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Controllers
 {
+    [ServiceFilter(typeof(ILogRepository))]
     public class FilterController : Controller
     {
         FilterServices<Enterprise_MVC_Core> _filterServices;

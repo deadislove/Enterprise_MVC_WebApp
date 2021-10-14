@@ -4,6 +4,11 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;</NoWarn>
+    <WarningsAsErrors>NU1605</WarningsAsErrors>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Remove="Patterns_Repo\**" />
     <EmbeddedResource Remove="Patterns_Repo\**" />

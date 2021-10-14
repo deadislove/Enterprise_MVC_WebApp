@@ -2,7 +2,6 @@
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Flyweight;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Flyweight
@@ -22,7 +21,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Flyweight
             {
                 dynamic obj = repo.GetAll().Result;
 
-                return obj as List<T>;
+                return await Task.Run(() => obj as List<T>);
             }
             catch (Exception ex)
             {

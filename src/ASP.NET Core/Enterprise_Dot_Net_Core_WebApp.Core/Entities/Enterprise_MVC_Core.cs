@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Core.Entities
@@ -11,6 +12,9 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.Entities
 
         public string Name { get; set; }
 
-        public int? Age { get; set; } 
+        public int? Age { get; set; }
+                
+        [NotMapped]
+        public DateTime Date { get; set; } = DateTime.Now;
     }
 }

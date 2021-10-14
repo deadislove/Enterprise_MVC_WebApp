@@ -1,5 +1,5 @@
 ﻿using Enterprise_Dot_Net_Core_WebApp.Core.DTOs;
-using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Command;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.Command;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.Behavioral
 {
     public class CommandAnotherExeServices : ICommandExe, IDisposable
     {
-        private RequestObj _reqObj;
+        private readonly RequestObj _reqObj;
 
         public CommandAnotherExeServices(RequestObj reqObj)
         {

@@ -5,14 +5,16 @@ using Enterprise_Dot_Net_Core_WebApp.Core.DTOs.DesginPatterns;
 using Enterprise_Dot_Net_Core_WebApp.Core.Entities;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Flyweight;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns;
+using Enterprise_Dot_Net_Core_WebApp.Logging.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Controllers
 {
+    [ServiceFilter(typeof(ILogRepository))]
     public class FlyweightController : Controller, IDisposable
     {
         FlyweightServices flyweightServices;
-        IFlyweight<Enterprise_MVC_Core> iFlyweight;
+        readonly IFlyweight<Enterprise_MVC_Core> iFlyweight;
 
         public FlyweightController(IFlyweight<Enterprise_MVC_Core> _iFlyweight)
         {
@@ -56,7 +58,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Controllers
             }
         }
 
-        private void Dispose()
+        private new void Dispose()
         {
             GC.SuppressFinalize(this);
         }

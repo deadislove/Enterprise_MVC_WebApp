@@ -153,6 +153,6 @@ namespace Enterprise_Dot_Net_Core_WebApp.Controllers
             return repo.GetById(id) != null;
         }
 
-        public void Dispose() => GC.SuppressFinalize(this);
+        public new void Dispose() => GC.SuppressFinalize(this);
     }
 }

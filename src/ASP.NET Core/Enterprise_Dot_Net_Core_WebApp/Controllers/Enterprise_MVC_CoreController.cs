@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using Enterprise_Dot_Net_Core_WebApp.Core.Entities;
 using Enterprise_Dot_Net_Core_WebApp.Infra.DBContext;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface;
+using Enterprise_Dot_Net_Core_WebApp.Logging.Interface;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Controllers
 {
+    [ServiceFilter(typeof(ILogRepository))]
     public class Enterprise_MVC_CoreController : Controller
     {
         private readonly DemoDbContext _context;
@@ -20,10 +22,10 @@ namespace Enterprise_Dot_Net_Core_WebApp.Controllers
         {
             _context = context;
             this.repo = _repo;
-        }        
+        }
 
         // GET: Enterprise_MVC_Core
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             //return View(await _context.Enterprise_MVC_Cores.ToListAsync());
 
@@ -59,7 +61,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Name,Age")] Enterprise_MVC_Core enterprise_MVC_Core)
+        public IActionResult Create([Bind("ID,Name,Age")] Enterprise_MVC_Core enterprise_MVC_Core)
         {
             if (ModelState.IsValid)
             {
@@ -74,7 +76,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Controllers
         }
 
         // GET: Enterprise_MVC_Core/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public IActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -95,7 +97,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Age")] Enterprise_MVC_Core enterprise_MVC_Core)
+        public IActionResult Edit(int id, [Bind("ID,Name,Age")] Enterprise_MVC_Core enterprise_MVC_Core)
         {
             if (id != enterprise_MVC_Core.ID)
             {

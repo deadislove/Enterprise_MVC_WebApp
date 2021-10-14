@@ -1,9 +1,11 @@
 ﻿using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Singleton;
+using Enterprise_Dot_Net_Core_WebApp.Logging.Interface;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Controllers
 {
+    [ServiceFilter(typeof(ILogRepository))]
     public class SingletonController : Controller
     {
         private readonly IOperationTransient _transientOperation;

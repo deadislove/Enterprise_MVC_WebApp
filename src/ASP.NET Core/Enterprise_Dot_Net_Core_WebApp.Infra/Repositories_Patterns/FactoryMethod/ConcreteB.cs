@@ -34,6 +34,6 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.FactoryMeth
 
         public string From_Info() => "From ConcreteB class.";
 
-        public void Dispose() => GC.SuppressFinalize(this);
+        public new void Dispose() => GC.SuppressFinalize(this);
     }
 }

@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using Enterprise_Dot_Net_Core_WebApp.Core.Entities;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Adapter;
+using Enterprise_Dot_Net_Core_WebApp.Logging.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Controllers
 {
+    [ServiceFilter(typeof(ILogRepository))]
     public class AdapterController : Controller
     {
         private readonly IAdapter_Obj<Enterprise_MVC_Core> adapter_Obj;

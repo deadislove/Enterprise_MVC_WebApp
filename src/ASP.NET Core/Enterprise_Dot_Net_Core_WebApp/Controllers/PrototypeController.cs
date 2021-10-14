@@ -1,10 +1,12 @@
 ﻿using System;
 using Enterprise_Dot_Net_Core_WebApp.Core.Entities;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Prototype;
+using Enterprise_Dot_Net_Core_WebApp.Logging.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Controllers
 {
+    [ServiceFilter(typeof(ILogRepository))]
     public class PrototypeController : Controller
     {
         private IPrototype<Enterprise_MVC_Core> repo;
@@ -28,8 +30,8 @@ namespace Enterprise_Dot_Net_Core_WebApp.Controllers
             PrototypeEntity prototypeEntity2 = prototypeEntity.ShallowCopy();
             PrototypeEntity prototypeEntity3 = prototypeEntity.DeepCopy();
 
-            Tuple<PrototypeEntity, PrototypeEntity, PrototypeEntity> Result_tuple = 
-                new Tuple<PrototypeEntity, PrototypeEntity, PrototypeEntity>(prototypeEntity, prototypeEntity2, prototypeEntity3);
+            Tuple<PrototypeEntity, PrototypeEntity, PrototypeEntity> Result_tuple;                
+            Result_tuple = Tuple.Create(prototypeEntity, prototypeEntity2, prototypeEntity3);
 
             // Before
             // prototypeEntity object

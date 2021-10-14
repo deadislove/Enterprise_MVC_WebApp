@@ -39,12 +39,14 @@ using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Prototype;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Composite;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Facade;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Flyweight;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.Command;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.ChainOfResponsibility;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.Interpreter;
 //Design patterns - services
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns;
-using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.ChainOfResponsibility;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.ChainOfResponsibility;
-using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Command;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Command;
+using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Interpreter;
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -128,6 +130,8 @@ namespace Enterprise_Dot_Net_Core_WebApp
             // Command
             services.AddScoped(typeof(ICommand<,>), typeof(CommandServices<,>));
             services.AddScoped(typeof(ICommandExe), typeof(CommandExeServices));
+            // Interpreter
+            services.AddScoped(typeof(IInterpreter<,>), typeof(InterpreterServices<,>));
 
             // Service type method.
             services.AddTransient<IOperationTransient, Operation>();

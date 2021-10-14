@@ -30,7 +30,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Infra.Repositories_Patterns.Adapter
                 else
                     return new List<T>();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 return new List<T>();
             }

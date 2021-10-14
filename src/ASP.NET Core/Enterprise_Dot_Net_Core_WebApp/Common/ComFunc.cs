@@ -124,6 +124,35 @@ namespace Enterprise_Dot_Net_Core_WebApp.Common
         }
         #endregion
 
+        #region Convert Bit Array to Byte Array
+        public static byte[] ToByteArr(BitArray bits)
+        {
+            const int BYTE = 8;
+            int length = (bits.Count / BYTE) + ((bits.Count % BYTE == 0) ? 0 : 1);
+            var bytes = new byte[length];
+
+            for (int i = 0; i < bits.Length; i++)
+            {
+
+                int bitIndex = i % BYTE;
+                int byteIndex = i / BYTE;
+
+                int mask = (bits[i] ? 1 : 0) << bitIndex;
+                bytes[byteIndex] |= (byte)mask;
+
+            }
+
+            return bytes;
+        }
+
+        public static byte[] BitArrayToByteArray(BitArray bits)
+        {
+            byte[] ret = new byte[(bits.Length - 1) / 8 + 1];
+            bits.CopyTo(ret, 0);
+            return ret;
+        }
+        #endregion
+
         #region IDisposable Support
         private bool disposedValue = false; // To detect redundant calls
 
