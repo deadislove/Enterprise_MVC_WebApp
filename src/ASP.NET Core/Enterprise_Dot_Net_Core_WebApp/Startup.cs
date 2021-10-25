@@ -47,6 +47,8 @@ using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.ChainOfResponsibility;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Command;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Interpreter;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Iterator;
+using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Iterator;
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -132,6 +134,8 @@ namespace Enterprise_Dot_Net_Core_WebApp
             services.AddScoped(typeof(ICommandExe), typeof(CommandExeServices));
             // Interpreter
             services.AddScoped(typeof(IInterpreter<,>), typeof(InterpreterServices<,>));
+            // Iterator
+            services.AddScoped(typeof(IIteratorServices<>), typeof(IteratorServices<>));
 
             // Service type method.
             services.AddTransient<IOperationTransient, Operation>();
