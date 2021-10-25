@@ -63,11 +63,14 @@ It is based on the ASP.NET Core framework v2.8.
 [Behavioral Patterns - Command](https://davidskyspace.com/behavioral-patterns-command/)
 \
 [Behavioral Patterns - Interpreter](https://davidskyspace.com/behavioral-patterns-interpreter/)
+\
+[Behavioral Patterns - Iterator](https://davidskyspace.com/behavioral-patterns-iterator/)
 
 ## Release Notification
-- 10/14/2021 Behavioral Patterns - Interpreter
+- 10/25/2021 Behavioral Patterns - Iterator
 
 ## History
+- 10/25/2021 Behavioral Patterns - Iterator
 - 10/14/2021 Behavioral Patterns - Interpreter
 - 09/30/2021 Behavioral Patterns - Command
 - 08/25/2021 Behavioral Patterns - Chain of Responsibility
