@@ -65,11 +65,14 @@ It is based on the ASP.NET Core framework v2.8.
 [Behavioral Patterns - Interpreter](https://davidskyspace.com/behavioral-patterns-interpreter/)
 \
 [Behavioral Patterns - Iterator](https://davidskyspace.com/behavioral-patterns-iterator/)
+\
+[Behavioral Patterns - Mediator ](https://davidskyspace.com/behavioral-patterns-mediator/)
 
 ## Release Notification
-- 10/25/2021 Behavioral Patterns - Iterator
+- 11/04/2021 Behavioral Patterns - Mediator
 
 ## History
+- 11/04/2021 Behavioral Patterns - Mediator
 - 10/25/2021 Behavioral Patterns - Iterator
 - 10/14/2021 Behavioral Patterns - Interpreter
 - 09/30/2021 Behavioral Patterns - Command
