@@ -1,0 +1,58 @@
+﻿@model ICollection<IEnumerable<Enterprise_Dot_Net_Core_WebApp.Core.Entities.Enterprise_MVC_Core>>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Mediator - Index</h1>
+
+<h3>Opeartion: </h3>
+<dl>
+    <dt>Default data layout</dt>
+    <dd>- Select all of data</dd>
+    <dt>Select last one data</dt>
+    <dd>- Data layout with order asc, then select last one data</dd>
+    <dt>All of data with order desc</dt>
+    <dd>- All of data with order desc</dd>
+</dl>
+
+@foreach (var item in Model.AsEnumerable())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => item.FirstOrDefault().ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => item.FirstOrDefault().Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => item.FirstOrDefault().Age)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => item.FirstOrDefault().Date)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Subitem in item.AsEnumerable())
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => Subitem.ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Subitem.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Subitem.Age)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Subitem.Date)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+

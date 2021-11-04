@@ -42,13 +42,15 @@ using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Flyweight;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.Command;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.ChainOfResponsibility;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.Interpreter;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Iterator;
 //Design patterns - services
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.ChainOfResponsibility;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Command;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Interpreter;
-using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Iterator;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Iterator;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Mediator;
+using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Mediator;
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -136,6 +138,9 @@ namespace Enterprise_Dot_Net_Core_WebApp
             services.AddScoped(typeof(IInterpreter<,>), typeof(InterpreterServices<,>));
             // Iterator
             services.AddScoped(typeof(IIteratorServices<>), typeof(IteratorServices<>));
+            // Mediator
+            services.AddScoped(typeof(IMediatorExe<>), typeof(MediatorServices<>));
+
 
             // Service type method.
             services.AddTransient<IOperationTransient, Operation>();
