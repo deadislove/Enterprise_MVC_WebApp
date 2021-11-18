@@ -84,7 +84,9 @@ This repository provide the enterprise architecture level sample projects. The g
 \
 [Behavioral Patterns - Iterator](https://davidskyspace.com/behavioral-patterns-iterator/)
 \
-[Behavioral Patterns - Mediator ](https://davidskyspace.com/behavioral-patterns-mediator/)
+[Behavioral Patterns - Mediator](https://davidskyspace.com/behavioral-patterns-mediator/)
+\
+[Behavioral Patterns - Memento](https://davidskyspace.com/behavioral-patterns-memento/)
 
 ### OTHER PART:
 [CRUD – Transaction Behavior in Entity Framework Core](https://davidskyspace.com/crud-transaction-behavior-in-entity-framework-core/)
