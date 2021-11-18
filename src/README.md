@@ -7,7 +7,7 @@
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_MVC_OlderPost)
 ### .NET Core
 + News
-  - [Behavioral Patterns - Mediator ](https://davidskyspace.com/behavioral-patterns-mediator/)
+  - [Behavioral Patterns - Memento](https://davidskyspace.com/behavioral-patterns-memento/)
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_Core_OlderPost)
 ### Other
 + News
