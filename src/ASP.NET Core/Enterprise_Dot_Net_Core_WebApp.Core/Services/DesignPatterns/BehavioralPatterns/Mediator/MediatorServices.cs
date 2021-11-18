@@ -74,7 +74,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.Behavioral
             // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
             Dispose(true);
             // TODO: uncomment the following line if the finalizer is overridden above.
-            // GC.SuppressFinalize(this);
+            GC.SuppressFinalize(this);
         }        
         #endregion
     }

@@ -1,39 +1,23 @@
-﻿using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Facade;
+﻿using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Memento;
 using System;
-using System.Threading.Tasks;
 
-namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Facade
+namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Memento
 {
-    public class FacadeSubsystem2<T> : IDisposable where T : class
+    public class ConcreteMemento<T> : IMemento<T>, IDisposable where T : class
     {
-        public IFacade<T> repo;
+        private T _State;
+        private DateTime _Date;
+
+        public ConcreteMemento(T State)
+        {
+            _State = State;
+            _Date = DateTime.Now;
+        }
+
+        public DateTime GetDate() => _Date;
+
+        public T ObjectStatus() => _State;
         
-        private string DefaultString { get; } = $"Facade subsystem 2 initiation";
-        private int? ObjId { get; } = 2;
-
-        public FacadeSubsystem2(IFacade<T> _repo)
-        {
-            this.repo = _repo;
-        }
-
-        public async Task<T> Operation(int? Id)
-        {
-            try
-            {
-                Id = Id ?? ObjId;
-                return await repo.GetById(Id.Value);
-            }
-            catch (Exception ex)
-            {
-                return Task.FromResult((dynamic)null);
-            }
-            finally
-            {
-                Dispose(true);
-            }
-        }
-
-        public Task<string> OperationInitiation() => Task.FromResult(DefaultString);
 
         #region IDisposable Support
         private bool disposedValue = false; // To detect redundant calls
@@ -55,7 +39,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Facade
         }
 
         // TODO: override a finalizer only if Dispose(bool disposing) above has code to free unmanaged resources.
-        ~FacadeSubsystem2()
+        ~ConcreteMemento()
         {
             // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
             Dispose(false);
@@ -70,6 +54,5 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Facade
             GC.SuppressFinalize(this);
         }
         #endregion
-
     }
 }

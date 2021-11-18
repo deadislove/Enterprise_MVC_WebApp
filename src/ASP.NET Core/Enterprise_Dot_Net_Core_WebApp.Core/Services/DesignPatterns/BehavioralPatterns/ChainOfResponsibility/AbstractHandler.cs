@@ -8,16 +8,16 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.Behavioral
 
         public IHandler SetNext(IHandler handler)
         {
-            this._nextHandler = handler;
+            _nextHandler = handler;
 
             return handler;
         }
 
         public virtual object Handle(object request)
         {
-            if (this._nextHandler != null)
+            if (_nextHandler != null)
             {
-                return this._nextHandler.Handle(request);
+                return _nextHandler.Handle(request);
             }
             else
                 return null;

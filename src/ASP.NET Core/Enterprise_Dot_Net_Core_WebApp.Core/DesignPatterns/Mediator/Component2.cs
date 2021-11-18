@@ -1,4 +1,6 @@
 ﻿using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Mediator;
+using Enterprise_Dot_Net_Core_WebApp.SharedKernel.Interface;
+using Enterprise_Dot_Net_Core_WebApp.SharedKernel.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,16 +9,30 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Mediator
 {
     public class Component2<T> : BaseComponent<T>, IDisposable where T : class
     {
-        public Component2() : base() { }
+        private IDataExtension _dataExtension;
+
+        #region Constructor
+        public Component2() : base()
+        {
+            DataExtensionInitialization();
+        }
 
         public Component2(IMediator<T> iMediator) : base(iMediator)
-        { }
+        {
+            DataExtensionInitialization();
+        }
+        #endregion
+
+        private void DataExtensionInitialization()
+        {
+            _dataExtension = new DataExtensionDefault();
+        }
 
         public void SortDesc<T>(object obj, out List<T> returnObj) where T : class
         {
             try
             {
-                DoSortDesc<T>(obj, out returnObj);
+                DoSortDesc(obj, out returnObj);
 
                 iMediator.Notify(obj, "Desc");
             }
@@ -55,7 +71,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Mediator
             try
             {
                 returnObj = (from source in obj as List<T>
-                             orderby GetDynamicSortProperty(source, "ID") descending
+                             orderby _dataExtension.GetDynamicSortProperty(source, "ID") descending
                              select source).ToList();
             }
             catch (Exception ex)
@@ -73,26 +89,9 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Mediator
             try
             {
                 returnObj = (from source in obj as List<T>
-                             orderby GetDynamicSortProperty(source, "ID") descending
+                             orderby _dataExtension.GetDynamicSortProperty(source, "ID") descending
                              select source
                              ).ToList().FirstOrDefault();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                Dispose();
-            }
-        }
-
-        private object GetDynamicSortProperty(object item, string propName)
-        {
-            try
-            {
-                //Use reflection to get order type
-                return item.GetType().GetProperty(propName).GetValue(item, null);
             }
             catch (Exception ex)
             {

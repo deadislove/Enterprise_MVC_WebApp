@@ -1,5 +1,7 @@
 ﻿using Enterprise_Dot_Net_Core_WebApp.Core.DTOs;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.Command;
+using Enterprise_Dot_Net_Core_WebApp.SharedKernel.Interface;
+using Enterprise_Dot_Net_Core_WebApp.SharedKernel.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +13,19 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.Behavioral
     public class CommandExeServices : ICommandExe, IDisposable
     {
         private RequestObj _reqObj;
+        private IDataExtension _dataExtension;
 
+        #region Constructor
         public CommandExeServices(RequestObj reqObj)
         {
             _reqObj = reqObj;
+            DataExtensionInitialization();
+        }
+        #endregion
+
+        private void DataExtensionInitialization()
+        {
+            _dataExtension = new DataExtensionDefault();
         }
 
         public Task<T> Execute<T>(object obj, object reqObj) where T : class
@@ -26,12 +37,12 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.Behavioral
                 switch (_reqObj)
                 {
                     case null:
-                        item = reqObj.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public)
-                                .ToDictionary(prop => prop.Name, prop => prop.GetValue(reqObj, null));
+                        _dataExtension.GetObjectValue(reqObj, out Dictionary<string, object> ReturnObjValue);
+                        item = ReturnObjValue;
                         break;
                     default:
-                        item = _reqObj.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public)
-                                .ToDictionary(prop => prop.Name, prop => prop.GetValue(reqObj, null));
+                        _dataExtension.GetObjectValue(_reqObj, out Dictionary<string, object> ReturnDefaultObjValue);
+                        item = ReturnDefaultObjValue;
                         break;
                 }
 
@@ -58,7 +69,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.Behavioral
             try
             {
                 returnObj = (from source in obj as List<T>
-                             where GetDynamicSortProperty(source, "ID").Equals(item["ID"])
+                             where _dataExtension.GetDynamicSortProperty(source, "ID").Equals(item["ID"])
                              select source).ToList();
             }
             catch (Exception ex)
@@ -97,10 +108,11 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.Behavioral
         }
 
         // TODO: override a finalizer only if Dispose(bool disposing) above has code to free unmanaged resources.
-        // ~CommandExeServices() {
-        //   // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
-        //   Dispose(false);
-        // }
+        ~CommandExeServices()
+        {
+            // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
+            Dispose(false);
+        }
 
         // This code added to correctly implement the disposable pattern.
         public void Dispose()
@@ -108,7 +120,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.Behavioral
             // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
             Dispose(true);
             // TODO: uncomment the following line if the finalizer is overridden above.
-            // GC.SuppressFinalize(this);
+            GC.SuppressFinalize(this);
         }
         #endregion
     }

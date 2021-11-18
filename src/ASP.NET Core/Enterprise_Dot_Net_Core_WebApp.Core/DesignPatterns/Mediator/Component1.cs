@@ -1,4 +1,6 @@
 ﻿using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Mediator;
+using Enterprise_Dot_Net_Core_WebApp.SharedKernel.Interface;
+using Enterprise_Dot_Net_Core_WebApp.SharedKernel.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,13 +9,24 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Mediator
 {
     public class Component1<T> : BaseComponent<T>, IDisposable where T : class
     {
+        private IDataExtension _dataExtension;
+
         #region Constructor 
         public Component1() : base()
-        { }
+        {
+            DataExtensionInitialization();
+        }
 
         public Component1(IMediator<T> iMediator) : base(iMediator)
-        { }
+        {
+            DataExtensionInitialization();
+        }
         #endregion
+
+        private void DataExtensionInitialization()
+        {
+            _dataExtension = new DataExtensionDefault();
+        }
 
         public void SortAes<T>(object obj, out List<T> returnObj) where T : class
         {
@@ -40,25 +53,8 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Mediator
             try
             {
                 returnObj = (from source in obj as List<T>
-                             orderby GetDynamicSortProperty(source, "ID") ascending
+                             orderby _dataExtension.GetDynamicSortProperty(source, "ID") ascending
                              select source).ToList();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                Dispose();
-            }
-        }
-
-        private object GetDynamicSortProperty(object item, string propName)
-        {
-            try
-            {
-                //Use reflection to get order type
-                return item.GetType().GetProperty(propName).GetValue(item, null);
             }
             catch (Exception ex)
             {

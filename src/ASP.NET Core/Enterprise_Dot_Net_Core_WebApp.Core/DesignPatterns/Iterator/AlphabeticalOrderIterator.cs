@@ -115,10 +115,11 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Iterator
         }
 
         // TODO: override a finalizer only if Dispose(bool disposing) above has code to free unmanaged resources.
-        // ~AlphabeticalOrderIterator() {
-        //   // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
-        //   Dispose(false);
-        // }
+        ~AlphabeticalOrderIterator()
+        {
+            // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
+            Dispose(false);
+        }
 
         // This code added to correctly implement the disposable pattern.
         public void Dispose()
@@ -126,7 +127,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Iterator
             // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
             Dispose(true);
             // TODO: uncomment the following line if the finalizer is overridden above.
-            // GC.SuppressFinalize(this);
+            GC.SuppressFinalize(this);
         }
         #endregion
     }

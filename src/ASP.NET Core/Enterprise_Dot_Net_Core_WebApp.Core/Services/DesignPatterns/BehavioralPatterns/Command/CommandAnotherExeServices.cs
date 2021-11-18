@@ -1,5 +1,7 @@
 ﻿using Enterprise_Dot_Net_Core_WebApp.Core.DTOs;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.Command;
+using Enterprise_Dot_Net_Core_WebApp.SharedKernel.Interface;
+using Enterprise_Dot_Net_Core_WebApp.SharedKernel.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +12,17 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.Behavioral
     public class CommandAnotherExeServices : ICommandExe, IDisposable
     {
         private readonly RequestObj _reqObj;
+        private IDataExtension _dataExtension;
 
         public CommandAnotherExeServices(RequestObj reqObj)
         {
             _reqObj = reqObj;
+            DataExtensionInitialization();
+        }
+
+        private void DataExtensionInitialization()
+        {
+            _dataExtension = new DataExtensionDefault();
         }
 
         public Task<T> Execute<T>(object obj, object reqObj) where T : class
@@ -43,7 +52,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.Behavioral
             try
             {
                 returnObj = (from source in obj as List<T>
-                             orderby GetDynamicSortProperty(source, "ID") descending
+                             orderby _dataExtension.GetDynamicSortProperty(source, "ID") descending
                              select source).FirstOrDefault();
             }
             catch (Exception ex)
@@ -54,12 +63,6 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.Behavioral
             {
                 Dispose();
             }
-        }
-
-        private object GetDynamicSortProperty(object item, string propName)
-        {
-            //Use reflection to get order type
-            return item.GetType().GetProperty(propName).GetValue(item, null);
         }
 
         #region IDisposable Support
@@ -82,10 +85,11 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.Behavioral
         }
 
         // TODO: override a finalizer only if Dispose(bool disposing) above has code to free unmanaged resources.
-        // ~CommandAnotherExeServices() {
-        //   // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
-        //   Dispose(false);
-        // }
+        ~CommandAnotherExeServices()
+        {
+            // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
+            Dispose(false);
+        }
 
         // This code added to correctly implement the disposable pattern.
         public void Dispose()
@@ -93,7 +97,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.Behavioral
             // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
             Dispose(true);
             // TODO: uncomment the following line if the finalizer is overridden above.
-            // GC.SuppressFinalize(this);
+            GC.SuppressFinalize(this);
         }
         #endregion
     }

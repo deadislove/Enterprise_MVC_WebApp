@@ -1,0 +1,59 @@
+﻿@model Tuple<
+        IEnumerable<string>,
+        IEnumerable<string>
+        >
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Memento Index</h1>
+
+<h3>
+    Memento operation process
+</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Side</th>
+            <th>Opearation message</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Item2)
+        {
+            <tr>
+                <td>Client: </td>
+                <td>
+                    @item
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>
+    Entity data process
+</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Side</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Item1)
+        {
+            <tr>
+                <td>Server: </td>
+                <td>
+                    @item
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

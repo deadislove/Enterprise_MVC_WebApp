@@ -43,6 +43,7 @@ using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPat
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.ChainOfResponsibility;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.Interpreter;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Iterator;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Memento;
 //Design patterns - services
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.ChainOfResponsibility;
@@ -51,6 +52,7 @@ using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatt
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Iterator;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Mediator;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Mediator;
+using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Memento;
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -140,6 +142,8 @@ namespace Enterprise_Dot_Net_Core_WebApp
             services.AddScoped(typeof(IIteratorServices<>), typeof(IteratorServices<>));
             // Mediator
             services.AddScoped(typeof(IMediatorExe<>), typeof(MediatorServices<>));
+            // Memento
+            services.AddScoped(typeof(IMementoServices<>), typeof(MementoServices<>));
 
 
             // Service type method.

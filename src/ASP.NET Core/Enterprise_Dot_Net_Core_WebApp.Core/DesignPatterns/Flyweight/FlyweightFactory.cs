@@ -47,9 +47,9 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.DesignPatterns.Flyweight
             string key = this.GetKey(sharedState);
             
             if (flyweight.Where(t => t.Item2 == key).Count() == 0)
-                this.flyweight.Add(new Tuple<Flyweight, string>(new Flyweight(sharedState), key));
+                flyweight.Add(new Tuple<Flyweight, string>(new Flyweight(sharedState), key));
 
-            return this.flyweight.Where(t => t.Item2 == key).FirstOrDefault().Item1;
+            return flyweight.Where(t => t.Item2 == key).FirstOrDefault().Item1;
         }
 
         public IEnumerable<string> ListFlyweights()
