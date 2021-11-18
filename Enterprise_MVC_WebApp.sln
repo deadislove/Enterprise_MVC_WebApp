@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enterprise_Dot_Net_Core_Web
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enterprise_Dot_Net_Core_WebApp.Infra", "src\ASP.NET Core\Enterprise_Dot_Net_Core_WebApp.Infra\Enterprise_Dot_Net_Core_WebApp.Infra.csproj", "{92377C78-71C8-4B75-BFC6-1CCB19266B03}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enterprise_Dot_Net_Core_WebApp.SharedKernel", "src\ASP.NET Core\Enterprise_Dot_Net_Core_WebApp.SharedKernel\Enterprise_Dot_Net_Core_WebApp.SharedKernel.csproj", "{50D30A20-9689-41CB-8B03-289067A0F8E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{92377C78-71C8-4B75-BFC6-1CCB19266B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92377C78-71C8-4B75-BFC6-1CCB19266B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92377C78-71C8-4B75-BFC6-1CCB19266B03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50D30A20-9689-41CB-8B03-289067A0F8E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50D30A20-9689-41CB-8B03-289067A0F8E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50D30A20-9689-41CB-8B03-289067A0F8E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50D30A20-9689-41CB-8B03-289067A0F8E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +77,7 @@ Global
 		{4333CCF5-F6E2-401C-A378-3136C1982998} = {68CA7DA8-9439-4F78-BBA0-89982379B1F7}
 		{57F4E867-EE83-47B1-BB51-C94E537610A9} = {68CA7DA8-9439-4F78-BBA0-89982379B1F7}
 		{92377C78-71C8-4B75-BFC6-1CCB19266B03} = {68CA7DA8-9439-4F78-BBA0-89982379B1F7}
+		{50D30A20-9689-41CB-8B03-289067A0F8E2} = {68CA7DA8-9439-4F78-BBA0-89982379B1F7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AADEF231-D6EB-4471-8C69-139B54527C47}
