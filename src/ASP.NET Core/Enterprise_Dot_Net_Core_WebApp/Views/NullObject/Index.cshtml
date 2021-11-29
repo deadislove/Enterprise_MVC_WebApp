@@ -1,0 +1,13 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Null Object - Index</h1>
+
+@foreach (var item in Model)
+{
+    <p>
+        @Html.DisplayFor(Item => item)
+    </p>
+}

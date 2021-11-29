@@ -10,6 +10,7 @@ namespace Enterprise_Dot_Net_Core_WebApp.Core.Entities
         [Key]
         public int ID { get; set; }
 
+        [Required(AllowEmptyStrings =false, ErrorMessage ="Name must have value.")]
         public string Name { get; set; }
 
         public int? Age { get; set; }

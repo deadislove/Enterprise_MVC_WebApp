@@ -44,15 +44,17 @@ using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPat
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.Interpreter;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Iterator;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Memento;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Mediator;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.NullObject;
 //Design patterns - services
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.ChainOfResponsibility;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Command;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Interpreter;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Iterator;
-using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Mediator;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Mediator;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Memento;
+using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.NullObject;
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -144,7 +146,8 @@ namespace Enterprise_Dot_Net_Core_WebApp
             services.AddScoped(typeof(IMediatorExe<>), typeof(MediatorServices<>));
             // Memento
             services.AddScoped(typeof(IMementoServices<>), typeof(MementoServices<>));
-
+            // Null object pattern
+            services.AddScoped(typeof(INullObject), typeof(NullObjServices));
 
             // Service type method.
             services.AddTransient<IOperationTransient, Operation>();
