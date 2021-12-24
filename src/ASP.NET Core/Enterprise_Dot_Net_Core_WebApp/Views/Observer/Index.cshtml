@@ -1,0 +1,16 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Observer - Index</h1>
+
+<h4>Observer viewpoint:</h4>
+@{int index = 1;}
+@foreach (var item in Model)
+{
+
+    <p>@index &nbsp; @Html.DisplayFor(UIitem => item)</p>
+
+    index++;
+}
