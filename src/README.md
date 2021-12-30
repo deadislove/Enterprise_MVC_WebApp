@@ -1,5 +1,5 @@
 # News
-**<div align="right">Date: Nov, 2021</div>**
+**<div align="right">Date: Dec, 2021</div>**
 
 ### .NET MVC
 + News
@@ -7,7 +7,7 @@
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_MVC_OlderPost)
 ### .NET Core
 + News
-  - [Behavioral Patterns - Null Objects](https://davidskyspace.com/behavioral-patterns-null-object/)
+  - [Behavioral Patterns – Observer](https://davidskyspace.com/behavioral-patterns-observer/)
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_Core_OlderPost)
 ### Other
 + News
