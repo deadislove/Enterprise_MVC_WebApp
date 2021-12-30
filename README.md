@@ -89,6 +89,8 @@ This repository provide the enterprise architecture level sample projects. The g
 [Behavioral Patterns - Memento](https://davidskyspace.com/behavioral-patterns-memento/)
 \
 [Behavioral Patterns - Null Objects](https://davidskyspace.com/behavioral-patterns-null-object/)
+\
+[Behavioral Patterns – Observer](https://davidskyspace.com/behavioral-patterns-observer/)
 
 ### OTHER PART:
 [CRUD – Transaction Behavior in Entity Framework Core](https://davidskyspace.com/crud-transaction-behavior-in-entity-framework-core/)
