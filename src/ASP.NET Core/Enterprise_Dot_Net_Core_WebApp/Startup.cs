@@ -47,6 +47,7 @@ using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Memento;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Mediator;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.NullObject;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.Observer;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.State;
 //Design patterns - services
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.ChainOfResponsibility;
@@ -57,6 +58,7 @@ using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatt
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Memento;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.NullObject;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Observer;
+using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.State;
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -152,6 +154,8 @@ namespace Enterprise_Dot_Net_Core_WebApp
             services.AddScoped(typeof(INullObject), typeof(NullObjServices));
             // Observer
             services.AddScoped(typeof(IObserverServices), typeof(ObserverServices));
+            // State
+            services.AddScoped(typeof(IStateServices<>), typeof(StateServices<>));
 
             // Service type method.
             services.AddTransient<IOperationTransient, Operation>();
