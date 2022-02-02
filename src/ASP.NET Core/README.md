@@ -73,11 +73,14 @@ It is based on the ASP.NET Core framework v2.8.
 [Behavioral Patterns - Null Objects](https://davidskyspace.com/behavioral-patterns-null-object/)
 \
 [Behavioral Patterns – Observer](https://davidskyspace.com/behavioral-patterns-observer/)
+\
+[Behavioral Patterns – State](https://davidskyspace.com/behavioral-patterns-state/)
 
 ## Release Notification
-- 12/30/2021 Behavioral Patterns - Observer
+- 01/20/2022 Behavioral Patterns - State
 
 ## History
+- 01/20/2022 Behavioral Patterns - State
 - 12/30/2021 Behavioral Patterns - Observer
 - 11/29/2021 Behavioral Patterns - Null Object
 - 11/18/2021 Behavioral Patterns - Memento
