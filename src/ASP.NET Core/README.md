@@ -75,11 +75,14 @@ It is based on the ASP.NET Core framework v2.8.
 [Behavioral Patterns – Observer](https://davidskyspace.com/behavioral-patterns-observer/)
 \
 [Behavioral Patterns – State](https://davidskyspace.com/behavioral-patterns-state/)
+\
+[Behavioral Patterns – Strategy](https://davidskyspace.com/behavioral-patterns-strategy/)
 
 ## Release Notification
-- 01/20/2022 Behavioral Patterns - State
+- 02/02/2022 Behavioral Patterns - Strategy
 
 ## History
+- 02/02/2022 Behavioral Patterns - Strategy
 - 01/20/2022 Behavioral Patterns - State
 - 12/30/2021 Behavioral Patterns - Observer
 - 11/29/2021 Behavioral Patterns - Null Object
