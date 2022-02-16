@@ -95,6 +95,8 @@ This repository provide the enterprise architecture level sample projects. The g
 [Behavioral Patterns – State](https://davidskyspace.com/behavioral-patterns-state/)
 \
 [Behavioral Patterns – Strategy](https://davidskyspace.com/behavioral-patterns-strategy/)
+\
+[Behavioral Patterns – Template method](https://davidskyspace.com/behavioral-patterns-template-method/)
 
 ### OTHER PART:
 [CRUD – Transaction Behavior in Entity Framework Core](https://davidskyspace.com/crud-transaction-behavior-in-entity-framework-core/)
