@@ -49,6 +49,7 @@ using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPat
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.Observer;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.BehavioralPatterns.State;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Strategy;
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.TemplateMethod;
 //Design patterns - services
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.ChainOfResponsibility;
@@ -61,6 +62,7 @@ using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatt
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Observer;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.State;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Strategy;
+using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.TemplateMethod;
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -160,6 +162,8 @@ namespace Enterprise_Dot_Net_Core_WebApp
             services.AddScoped(typeof(IStateServices<>), typeof(StateServices<>));
             // Strategy
             services.AddScoped(typeof(IStrategyServices<>), typeof(StrategyServices<>));
+            // Template Method
+            services.AddScoped(typeof(ITemplateMethodServices<>), typeof(TemplateMethodServices<>));
 
             // Service type method.
             services.AddTransient<IOperationTransient, Operation>();

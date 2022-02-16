@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using Enterprise_Dot_Net_Core_WebApp.Core.Entities;
 using Enterprise_Dot_Net_Core_WebApp.Core.Interface.DesignPatterns.Strategy;
+using Enterprise_Dot_Net_Core_WebApp.Logging.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Enterprise_Dot_Net_Core_WebApp.Controllers.DesignPatterns
 {
+    [ServiceFilter(typeof(ILogRepository))]
     public class StrategyController : Controller
     {
         private readonly IStrategyServices<Enterprise_MVC_Core> _repo;
