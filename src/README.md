@@ -1,5 +1,5 @@
 # News
-**<div align="right">Date: Jan, 2022</div>**
+**<div align="right">Date: March, 2022</div>**
 
 ### .NET MVC
 + News
@@ -7,7 +7,7 @@
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_MVC_OlderPost)
 ### .NET Core
 + News
-  - [Behavioral Patterns – Template method](https://davidskyspace.com/behavioral-patterns-template-method/)
+  - [Behavioral Patterns - Visitor](https://davidskyspace.com/behavioral-patterns-visitor/)
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_Core_OlderPost)
 ### Other
 + News
