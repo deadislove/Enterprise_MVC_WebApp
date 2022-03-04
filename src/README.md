@@ -7,7 +7,7 @@
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_MVC_OlderPost)
 ### .NET Core
 + News
-  - [Behavioral Patterns – Strategy](https://davidskyspace.com/behavioral-patterns-strategy/)
+  - [Behavioral Patterns – Template method](https://davidskyspace.com/behavioral-patterns-template-method/)
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_Core_OlderPost)
 ### Other
 + News
