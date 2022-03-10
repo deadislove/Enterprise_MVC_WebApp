@@ -65,6 +65,9 @@ using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatt
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Strategy;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.TemplateMethod;
 using Enterprise_Dot_Net_Core_WebApp.Core.Services.DesignPatterns.BehavioralPatterns.Visitor;
+//Unit of Work
+using Enterprise_Dot_Net_Core_WebApp.Core.Interface.UnitOfWork;
+using Enterprise_Dot_Net_Core_WebApp.Core.Services.UnitOfWork;
 
 namespace Enterprise_Dot_Net_Core_WebApp
 {
@@ -168,6 +171,9 @@ namespace Enterprise_Dot_Net_Core_WebApp
             services.AddScoped(typeof(ITemplateMethodServices<>), typeof(TemplateMethodServices<>));
             // Visitor
             services.AddScoped(typeof(IVisitorServices<>), typeof(VisitorServices<>));
+
+            // Unit of Work
+            services.AddScoped(typeof(IUnitOfWorkClientServices<>), typeof(UnitOfWorkClientServices<>));
 
             // Service type method.
             services.AddTransient<IOperationTransient, Operation>();

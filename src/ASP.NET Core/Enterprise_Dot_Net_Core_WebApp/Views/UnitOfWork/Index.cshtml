@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Enterprise_Dot_Net_Core_WebApp.Core.Entities.Enterprise_MVC_Core>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>UnitOfWork - Index</h1>
+
+<table class=" table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.FirstOrDefault().ID)</th>
+            <th>@Html.DisplayNameFor(m => m.FirstOrDefault().Name)</th>
+            <th>@Html.DisplayNameFor(m => m.FirstOrDefault().Age)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(i => item.ID)</td>
+                <td>@Html.DisplayFor(i => item.Name)</td>
+                <td>@Html.DisplayFor(i => item.Age)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
