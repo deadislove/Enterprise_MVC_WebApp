@@ -7,7 +7,7 @@
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_MVC_OlderPost)
 ### .NET Core
 + News
-  - [Behavioral Patterns - Visitor](https://davidskyspace.com/behavioral-patterns-visitor/)
+  - [UnitOfWork pattern concepts in .NET](https://davidskyspace.com/unit-of-work-pattern-concepts-in-net/)
 + [History](https://github.com/deadislove/Enterprise_MVC_WebApp/wiki/DotNET_Core_OlderPost)
 ### Other
 + News
